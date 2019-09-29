@@ -18,6 +18,7 @@ public class Test {
 	private static final String LOCK_ONE = "LockOne";
 	private static final String LOCK_TWO = "LockTwo";
 	private static final String PETERSON = "Peterson";
+	private static final String L_BAKERY = "LBakery";
 	private static final String TREE_PETERSON = "TreePeterson";
 	private static final String FILTER = "Filter";
 
