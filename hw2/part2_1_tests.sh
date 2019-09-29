@@ -1,0 +1,9 @@
+java -cp build/libs/hw2.jar edu.vt.ece.Test2 Peterson 2 
+java -cp build/libs/hw2.jar edu.vt.ece.Test2 Filter 2
+java -cp build/libs/hw2.jar edu.vt.ece.Test2 Bakery 2
+java -cp build/libs/hw2.jar edu.vt.ece.Test2 Filter 4
+java -cp build/libs/hw2.jar edu.vt.ece.Test2 Bakery 4
+java -cp build/libs/hw2.jar edu.vt.ece.Test2 Filter 6
+java -cp build/libs/hw2.jar edu.vt.ece.Test2 Bakery 6
+java -cp build/libs/hw2.jar edu.vt.ece.Test2 Filter 8
+java -cp build/libs/hw2.jar edu.vt.ece.Test2 Bakery 8

@@ -26,9 +26,10 @@ public class TestThread2 extends Thread implements ThreadId{
 	public void run() {
 		long start = System.currentTimeMillis();
 
-		for(int i=0; i<iter; i++)
+		for(int i=0; i<iter; i++) {
 			counter.getAndIncrement();
-		
+		}
+
 		long end = System.currentTimeMillis();
 		elapsed = end - start;
 	}

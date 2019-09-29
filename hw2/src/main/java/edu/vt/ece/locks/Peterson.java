@@ -9,6 +9,10 @@ public class Peterson implements Lock{
 	private AtomicBoolean flag[] = new AtomicBoolean[2];
 	private AtomicInteger victim;
 
+	public Peterson(int n){
+		this();
+	}
+
 	public Peterson() {
 		flag[0] = new AtomicBoolean();
 		flag[1] = new AtomicBoolean();

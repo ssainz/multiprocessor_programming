@@ -10,7 +10,8 @@ public class TestThread extends Thread implements ThreadId {
 		ID_GEN = 0;
 	}
 
-	private static final int MAX_COUNT = 1000;
+	//private static final int MAX_COUNT = 4;
+	private static final int MAX_COUNT = 640000;
 
 	private Counter counter;
 	private int id;
