@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SubmissionTest2" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-09-29T20:11:06" hostname="ssp-2.local" time="0.576">
+  <properties/>
+  <testcase name="TestTest2_Bakery()" classname="SubmissionTest2" time="0.028"/>
+  <testcase name="TestTest2_Filter()" classname="SubmissionTest2" time="0.003"/>
+  <testcase name="TestTest2_Bakery_8Thread()" classname="SubmissionTest2" time="0.119"/>
+  <testcase name="TestTest2_Filter_8Thread()" classname="SubmissionTest2" time="0.239"/>
+  <testcase name="TestTest2_TreePeterson()" classname="SubmissionTest2" time="0.004"/>
+  <testcase name="TestTest2_TreePeterson_8Thread()" classname="SubmissionTest2" time="0.174"/>
+  <testcase name="TestTest2_Peterson()" classname="SubmissionTest2" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Average time per thread is | Bakery,2,10 = 0.000000
+Average time per thread is | Bakery,2,10 = 0.000000
+]]></system-err>
+</testsuite>

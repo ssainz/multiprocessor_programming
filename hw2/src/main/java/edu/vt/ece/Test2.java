@@ -33,6 +33,7 @@ public class Test2 {
 		for (int i = 0; i < times; i++) {
 			try {
 				tot = run(lockClass, threadCount, iters);
+				System.out.println(String.format("Average time per thread is | %s,%d,%d = %f", lockClass, threadCount, iters, tot));
 			} catch (NoSuchMethodException e) {
 				e.printStackTrace();
 			} catch (InvocationTargetException e) {
@@ -40,7 +41,8 @@ public class Test2 {
 			}
 		}
 
-		System.out.println(String.format("%s,%d,%d = %f", lockClass, threadCount, iters, tot));
+
+		System.out.println(String.format("Average time per thread is | %s,%d,%d = %f", lockClass, threadCount, iters, tot));
 	}
 
 	private static double run(String lockClass, int threadCount, int iters) throws InterruptedException, ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {

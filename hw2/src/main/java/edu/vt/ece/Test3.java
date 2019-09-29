@@ -34,7 +34,7 @@ public class Test3 {
         cArg[0] = int.class;
         cArg[1] = int.class;
         try {
-            Lock lock = (Lock) lockerClass.getDeclaredConstructor(cArg).newInstance(threadCount, lCount);
+            Lock lock = (Lock) lockerClass.getDeclaredConstructor(cArg).newInstance(lCount,threadCount);
             final Counter counter = new SharedCounter(0, lock);
             for(int t=0; t<threadCount; t++)
                 new TestThread2(counter, iters).start();

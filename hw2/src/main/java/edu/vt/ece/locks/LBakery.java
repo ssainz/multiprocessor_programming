@@ -12,7 +12,7 @@ public class LBakery implements Lock {
     int L = 0;
     AtomicInteger counter = new AtomicInteger(0);
 
-    public LBakery(int n, int l) {
+    public LBakery(int l, int n) {
         flag = new AtomicBoolean[n];
         stampSystem = new TimestampSystemImp(n);
         L = l;
