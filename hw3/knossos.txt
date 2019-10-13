@@ -1,0 +1,51 @@
+;; How to run: https://github.com/jepsen-io/knossos#as-a-library
+;; example: https://github.com/jepsen-io/knossos/blob/master/data/cas-register/good/memstress3-1.edn
+;; models: https://github.com/jepsen-io/knossos/blob/master/src/knossos/model.clj
+
+
+;; Exercise 1.6:
+sergiosainz@ssp-2:~/Projects/jepsen-io/knossos$ lein repl
+(require '[knossos.model :as model] '[knossos.competition :as competition])
+(competition/analysis (model/multi-register {:r 0 :q 0}) [
+		{:process 1, :type :invoke, :f :txn, :value [[:write :r 1]]}
+		{:process 0, :type :invoke, :f :txn, :value [[:read :r nil]]}
+		{:process 2, :type :invoke, :f :txn, :value [[:write :r 2]]}
+		{:process 0, :type :ok, :f :txn, :value [[:read :r 1]]}
+		{:process 1, :type :ok, :f :txn, :value [[:write :r 1]]}
+		{:process 2, :type :ok, :f :txn, :value [[:write :r 2]]}
+		{:process 1, :type :invoke, :f :txn, :value [[:read :r nil]]}
+		{:process 1, :type :ok, :f :txn, :value [[:read :r 1]]}
+		{:process 0, :type :invoke, :f :txn, :value [[:write :q 3]]}
+		{:process 2, :type :invoke, :f :txn, :value [[:read :r nil]]}
+		{:process 0, :type :ok, :f :txn, :value [[:write :q 3]]}
+	]
+)
+
+;; Exercise 1.7:
+sergiosainz@ssp-2:~/Projects/jepsen-io/knossos$ lein repl
+(require '[knossos.model :as model] '[knossos.competition :as competition])
+(competition/analysis (model/fifo-queue) [
+		{:process 0, :type :invoke, :f :enqueue, :value 'x'}				
+		{:process 0, :type :ok, :f :enqueue, :value nil}
+		{:process 1, :type :invoke, :f :enqueue, :value 'y'}				
+		{:process 0, :type :invoke, :f :dequeue, :value nil}
+		{:process 1, :type :ok, :f :enqueue, :value nil}
+		{:process 0, :type :ok, :f :dequeue, :value 'y'}
+	]
+)
+
+;; Exercise 1.8:
+sergiosainz@ssp-2:~/Projects/jepsen-io/knossos$ lein repl
+(require '[knossos.model :as model] '[knossos.competition :as competition])
+(competition/analysis (model/fifo-queue) [
+		{:process 0, :type :invoke, :f :enqueue, :value 'x'}
+		{:process 1, :type :invoke, :f :enqueue, :value 'y'}
+		{:process 0, :type :ok, :f :enqueue, :value nil}
+		{:process 1, :type :ok, :f :enqueue, :value nil}
+		{:process 0, :type :invoke, :f :dequeue, :value nil}
+		{:process 2, :type :invoke, :f :dequeue, :value nil}		
+		{:process 0, :type :ok, :f :dequeue, :value 'y'}
+		{:process 2, :type :ok, :f :dequeue, :value 'y'}
+	]
+)
+
