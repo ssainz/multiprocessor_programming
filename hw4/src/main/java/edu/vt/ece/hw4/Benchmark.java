@@ -83,13 +83,12 @@ public class Benchmark {
             threads[t] = new TestThread(counter, iters);
         }
 
-        System.out.println("Before starting threads");
+
 
         for (int t = 0; t < threadCount; t++) {
             threads[t].start();
         }
 
-        System.out.println("Thread finished");
 
         long totalTime = 0;
         for (int t = 0; t < threadCount; t++) {
@@ -98,7 +97,7 @@ public class Benchmark {
         }
 
         double res = totalTime / threadCount;
-        System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
+        //System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
         return res;
     }
 
