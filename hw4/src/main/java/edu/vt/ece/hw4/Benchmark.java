@@ -26,7 +26,11 @@ public class Benchmark {
     }
 
     private static void run(String[] args, String mode, String lockClass, int threadCount, int iters) throws Exception {
+
+        double[] results = new double[5];
+
         for (int i = 0; i < 5; i++) {
+            double res = 0.0;
             Lock lock = null;
             switch (lockClass.trim()) {
                 case ALOCK:
@@ -43,7 +47,7 @@ public class Benchmark {
             switch (mode.trim().toLowerCase()) {
                 case "normal":
                     final Counter counter = new SharedCounter(0, lock);
-                    runNormal(counter, threadCount, iters);
+                    res = runNormal(counter, threadCount, iters);
                     break;
                 case "empty":
                     runEmptyCS(lock, threadCount, iters);
@@ -57,10 +61,19 @@ public class Benchmark {
                 default:
                     throw new UnsupportedOperationException("Implement this");
             }
+            results[i] = res;
         }
+
+        double averageWithoutFirst = 0.0;
+        double sum = 0;
+        for(int i = 1 ; i < 5 ; i++){
+            sum += results[i];
+        }
+        System.out.println("Average last four runs: " + (sum/4));
+
     }
 
-    private static void runNormal(Counter counter, int threadCount, int iters) throws Exception {
+    private static double runNormal(Counter counter, int threadCount, int iters) throws Exception {
         final TestThread[] threads = new TestThread[threadCount];
         TestThread.reset();
 
@@ -84,7 +97,9 @@ public class Benchmark {
             totalTime += threads[t].getElapsedTime();
         }
 
+        double res = totalTime / threadCount;
         System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
+        return res;
     }
 
     private static void runEmptyCS(Lock lock, int threadCount, int iters) throws Exception {
