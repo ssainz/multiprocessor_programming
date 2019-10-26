@@ -11,6 +11,12 @@ public class BackoffFactory {
                 return new ExponentialBackoff();
             case "Fibonacci":
                 return new FibonacciBackoff();
+            case "Fixed":
+                return new FixedBackoff();
+            case "Linear":
+                return new LinearBackoff();
+            case "Poly":
+                return new PolynomialBackoff();
         }
         return null;
     }
