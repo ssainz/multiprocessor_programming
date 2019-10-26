@@ -64,13 +64,19 @@ public class Benchmark {
         final TestThread[] threads = new TestThread[threadCount];
         TestThread.reset();
 
+
+
         for (int t = 0; t < threadCount; t++) {
             threads[t] = new TestThread(counter, iters);
         }
 
+        System.out.println("Before starting threads");
+
         for (int t = 0; t < threadCount; t++) {
             threads[t].start();
         }
+
+        System.out.println("Thread finished");
 
         long totalTime = 0;
         for (int t = 0; t < threadCount; t++) {
