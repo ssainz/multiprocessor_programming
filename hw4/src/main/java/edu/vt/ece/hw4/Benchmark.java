@@ -69,7 +69,7 @@ public class Benchmark {
         for(int i = 1 ; i < 5 ; i++){
             sum += results[i];
         }
-        System.out.println("Average last four runs: " + (sum/4));
+        System.out.println(String.format("[Lock = %s][Strategy = %s][Threads = %d][Iter = %d]Average last four runs: " + (sum/4), lockClass, args[4], threadCount, iters));
 
     }
 
