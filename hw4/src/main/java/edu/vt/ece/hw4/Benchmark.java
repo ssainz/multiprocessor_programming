@@ -42,7 +42,6 @@ public class Benchmark {
 
             switch (mode.trim().toLowerCase()) {
                 case "normal":
-                    lock = new MCSLock();
                     final Counter counter = new SharedCounter(0, lock);
                     runNormal(counter, threadCount, iters);
                     break;

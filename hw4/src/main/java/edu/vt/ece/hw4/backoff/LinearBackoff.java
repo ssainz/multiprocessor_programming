@@ -4,19 +4,22 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
-public class ExponentialBackoff implements Backoff {
+public class LinearBackoff implements Backoff {
 
     private int unsuccessfullAttemps = 0;
-    static int MAX_SLEEP_MILLISECONDS = 600000; // 10 minutes
+    static long MAX_SLEEP_MILLISECONDS = 600000; // 10 minutes
+
 
     @Override
     public void backoff() throws InterruptedException {
-        int unsuccessAtt = ++unsuccessfullAttemps;
 
-        long sleepTime = 1 << unsuccessAtt;
+        int unsuccessAttempt = ++unsuccessfullAttemps;
+
+        long sleepTime = unsuccessAttempt * 100;
 
         // Sleep for max:
-        //sleepTime = Math.min(MAX_SLEEP_MILLISECONDS, sleepTime);
+        // long sleepTime = Math.min(MAX_SLEEP_MILLISECONDS, sleepTime);
+
 
         TimeUnit.MILLISECONDS.sleep(sleepTime);
 

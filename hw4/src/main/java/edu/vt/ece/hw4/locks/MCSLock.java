@@ -16,7 +16,7 @@ public class MCSLock implements Lock {
     AtomicReference<QNode> queue;
     ThreadLocal<QNode> myNode;
 
-    MCSLock() {
+    public MCSLock() {
         queue = new AtomicReference<>(null);
         // initialize thread-local variable
         myNode = ThreadLocal.withInitial(() -> new QNode());

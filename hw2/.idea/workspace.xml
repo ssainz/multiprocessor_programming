@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa1f66e3-6f71-4ac2-aac1-69bfa435322a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/hw2_ssainz.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/hw2_ssainz.pdf" afterDir="false" />
-    </list>
+    <list default="true" id="aa1f66e3-6f71-4ac2-aac1-69bfa435322a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -326,7 +324,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32874617" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39908257" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39908257" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
