@@ -89,7 +89,9 @@ public class Benchmark {
 
 
         long totalTime = 0;
+
         for(int it = 0 ; it < iters ; it++){
+            System.out.println(String.format("It[%d] - ENTER",it));
             BarrierThread.reset();
             for (int t = 0; t < threadCount; t++) {
                 threads[t] = new BarrierThread(barrier);
@@ -103,6 +105,7 @@ public class Benchmark {
                 threads[t].join();
                 totalTime += threads[t].getElapsedTime();
             }
+            System.out.println(String.format("It[%d] - EXIT",it));
             barrier.reset();
         }
 
