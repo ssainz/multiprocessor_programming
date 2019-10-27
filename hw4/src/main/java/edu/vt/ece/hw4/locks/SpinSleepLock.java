@@ -65,7 +65,7 @@ public class SpinSleepLock implements Lock {
 
             synchronized (threads[(slot + maxSpin + 1) % size]){
 
-                System.out.println(String.format("Unlock[%s], Notifying [%s], its state is: [%d]",Thread.currentThread(), threads[(slot + maxSpin + 1) % size], threads[(slot + maxSpin + 1) % size].getState()));
+                System.out.println(String.format("Unlock[%s], Notifying [%s], state=[%s]",Thread.currentThread(), threads[(slot + maxSpin + 1) % size], threads[(slot + maxSpin + 1) % size].getState()));
                 threads[(slot + maxSpin + 1) % size].notify();
             }
         }
