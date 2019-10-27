@@ -60,17 +60,19 @@ public class Benchmark {
                     lock = new PriorityQueueLock(1000);
                     break;
             }
-
+            Counter counter = null;
+            if(option.equals("Timeout")){
+                counter = new SharedCounterTimeout(0, lock);
+            }else{
+                counter = new SharedCounter(0, lock);
+            }
             switch (mode.trim().toLowerCase()) {
                 case "normal":
-                    Counter counter = null;
-                    if(option.equals("Timeout")){
-                        counter = new SharedCounterTimeout(0, lock);
-                    }else{
-                        counter = new SharedCounter(0, lock);
-                    }
-
                     res = runNormal(counter, threadCount, iters);
+                    break;
+
+                case "normalPriority":
+                    res = runNormalPriority(counter, threadCount, iters);
                     break;
                 case "empty":
                     res = runEmptyCS(lock, threadCount, iters);
@@ -134,9 +136,31 @@ public class Benchmark {
             barrier.reset();
         }
 
-
         double res = (totalTime / threadCount) / 1000000 ; // Result as milliseconds
 
+        //System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
+        return res;
+    }
+
+    private static double runNormalPriority(Counter counter, int threadCount, int iters) throws Exception {
+        final PriorityBasedThread[] threads = new PriorityBasedThread[threadCount];
+        TestThread.reset();
+
+        for (int t = 0; t < threadCount; t++) {
+            threads[t] = new PriorityBasedThread(counter, iters);
+        }
+
+        for (int t = 0; t < threadCount; t++) {
+            threads[t].start();
+        }
+
+        long totalTime = 0;
+        for (int t = 0; t < threadCount; t++) {
+            threads[t].join();
+            totalTime += threads[t].getElapsedTime();
+        }
+
+        double res = totalTime / threadCount;
         //System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
         return res;
     }
