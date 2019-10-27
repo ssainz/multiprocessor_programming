@@ -14,8 +14,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class CLHLock implements Lock {
     AtomicReference<QNode> tail;
-    ThreadLocal<QNode> myPred;
-    ThreadLocal<QNode> myNode;
+    volatile ThreadLocal<QNode> myPred;
+    volatile ThreadLocal<QNode> myNode;
 
 
     public CLHLock() {
