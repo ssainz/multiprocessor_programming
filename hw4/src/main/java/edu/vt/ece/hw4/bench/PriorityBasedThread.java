@@ -14,7 +14,7 @@ public class PriorityBasedThread extends Thread implements ThreadId {
     public int priority;
 
     public PriorityBasedThread(Counter counter, int iter) {
-        id = Thread.currentThread().getId();
+        id = ID_GEN++;
         priority = (int) ((id % 5 ) + 1);
 
         this.counter = counter;
