@@ -53,7 +53,7 @@ public class CLHLock implements Lock {
         synchronized (this){
             QNode qnode = myNode.get();
             qnode.locked = false;
-            QNode pred = myPred.get();
+             pred = myPred.get();
             pred.locked = false;
         }
         myNode.set(pred);
