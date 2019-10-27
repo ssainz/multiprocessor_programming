@@ -30,7 +30,7 @@ public class ArrayBarrier implements Barrier {
             flags.set(id, 1);
         }
 
-        while(flags.get(totalThread - 1) == 2){}
+        while(flags.get(totalThread - 1) != 2){}
 
     }
 
