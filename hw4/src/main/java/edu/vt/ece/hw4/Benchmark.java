@@ -1,5 +1,6 @@
 package edu.vt.ece.hw4;
 
+import edu.vt.ece.hw4.barriers.ArrayBarrier;
 import edu.vt.ece.hw4.barriers.Barrier;
 import edu.vt.ece.hw4.barriers.TTASBarrier;
 import edu.vt.ece.hw4.bench.*;
@@ -56,8 +57,18 @@ public class Benchmark {
                     runLongCS(lock, threadCount, iters);
                     break;
                 case "barrier":
-                    Barrier b = new TTASBarrier();
-                    throw new UnsupportedOperationException("Complete this.");
+                    Barrier b = null;
+                    if(args[4].equals("ttasBarrier")){
+                        b = new TTASBarrier(threadCount);
+                    }else if (args[4].equals("arrayBarrier")){
+                        b = new ArrayBarrier(threadCount);
+                    }else{
+                        b = new ArrayBarrier(threadCount);
+                    }
+
+                    // Start test:
+                    runBarrier(b, threadCount, iters);
+
                 default:
                     throw new UnsupportedOperationException("Implement this");
             }
@@ -73,22 +84,45 @@ public class Benchmark {
 
     }
 
+    private static double runBarrier(Barrier barrier , int threadCount, int iters) throws Exception {
+        final BarrierThread[] threads = new BarrierThread[threadCount];
+
+
+        long totalTime = 0;
+        for(int it = 0 ; it < iters ; it++){
+            BarrierThread.reset();
+            for (int t = 0; t < threadCount; t++) {
+                threads[t] = new BarrierThread(barrier);
+            }
+
+            for (int t = 0; t < threadCount; t++) {
+                threads[t].start();
+            }
+
+            for (int t = 0; t < threadCount; t++) {
+                threads[t].join();
+                totalTime += threads[t].getElapsedTime();
+            }
+            barrier.reset();
+        }
+
+
+        double res = (totalTime / threadCount) / 1000000; // Result as milliseconds
+        //System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
+        return res;
+    }
+
     private static double runNormal(Counter counter, int threadCount, int iters) throws Exception {
         final TestThread[] threads = new TestThread[threadCount];
         TestThread.reset();
-
-
 
         for (int t = 0; t < threadCount; t++) {
             threads[t] = new TestThread(counter, iters);
         }
 
-
-
         for (int t = 0; t < threadCount; t++) {
             threads[t].start();
         }
-
 
         long totalTime = 0;
         for (int t = 0; t < threadCount; t++) {
