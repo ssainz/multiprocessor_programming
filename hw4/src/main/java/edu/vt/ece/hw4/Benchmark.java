@@ -92,7 +92,8 @@ public class Benchmark {
         for(int i = 1 ; i < 5 ; i++){
             sum += results[i];
         }
-        System.out.println(String.format("[Lock = %s][%s][Threads = %d][Iter per thread = %d]avg: " + (sum/4), lockClass, args[4], threadCount, iters));
+        String option = args.length < 5 ? "-" : args[4] ;
+        System.out.println(String.format("[Lock = %s][%s][Threads = %d][Iter per thread = %d]avg: " + (sum/4), lockClass, option, threadCount, iters));
 
     }
 
