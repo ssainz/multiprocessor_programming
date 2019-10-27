@@ -21,7 +21,7 @@ public class SpinSleepLock implements Lock {
         threads = new Thread[capacity];
         flag = new boolean[capacity];
         flag[0] = true;
-        this.maxSpin = maxSpin;
+        this.maxSpin = maxSpin <= 0 ? 1: maxSpin;
         this.size = capacity;
     }
 
