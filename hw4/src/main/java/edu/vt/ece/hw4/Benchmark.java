@@ -68,7 +68,7 @@ public class Benchmark {
 
                     // Start test:
                     runBarrier(b, threadCount, iters);
-
+                    break;
                 default:
                     throw new UnsupportedOperationException("Implement this");
             }
