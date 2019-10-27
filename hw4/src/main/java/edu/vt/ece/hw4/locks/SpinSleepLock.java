@@ -52,12 +52,11 @@ public class SpinSleepLock implements Lock {
     @Override
     public void unlock() {
         int slot = mySlotIndex.get();
-        int threadsInLock = numberOfThreadsInLock.get() - 1; // without itself.
+        int threadsInLock = numberOfThreadsInLock.getAndDecrement() - 1; // without itself.
         if(threadsInLock  > maxSpin ){
             // Here idea is that soon another thread that was sleeping will wake up (once lag[(slot + 1) % size] = true)
             // We need to see if there are any threads waiting (threadsInLock)
             // Awake some thread :
-
             while(threads[(slot + maxSpin + 1) % size].getState() == Thread.State.RUNNABLE){} // Wait until it becomes waiting
 
             synchronized (threads[(slot + maxSpin + 1) % size]){
@@ -66,7 +65,6 @@ public class SpinSleepLock implements Lock {
         }
 
         flag[slot] = false;
-        numberOfThreadsInLock.getAndDecrement();
         flag[(slot + 1) % size] = true;
 
     }
