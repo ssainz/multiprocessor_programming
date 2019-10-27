@@ -36,7 +36,9 @@ public class SpinSleepLock implements Lock {
 
         if(threadsInLock  - 1 > maxSpin){
             try {
-                Thread.currentThread().wait();
+                synchronized (Thread.currentThread()){
+                    Thread.currentThread().wait();
+                }
             } catch (InterruptedException e) {
                 // Awake, continue:
             }
@@ -54,7 +56,9 @@ public class SpinSleepLock implements Lock {
             // Here idea is that soon another thread that was sleeping will wake up (once lag[(slot + 1) % size] = true)
             // We need to see if there are any threads waiting (threadsInLock)
             // Awake some thread :
-            threads[(slot + maxSpin + 1) % size].notify();
+            synchronized (threads[(slot + maxSpin + 1) % size]){
+                threads[(slot + maxSpin + 1) % size].notify();
+            }
         }
 
         flag[slot] = false;
