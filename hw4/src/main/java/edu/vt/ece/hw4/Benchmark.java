@@ -67,7 +67,7 @@ public class Benchmark {
                     }
 
                     // Start test:
-                    runBarrier(b, threadCount, iters);
+                    res = runBarrier(b, threadCount, iters);
                     break;
                 default:
                     throw new UnsupportedOperationException("Implement this");
@@ -110,7 +110,8 @@ public class Benchmark {
         }
 
 
-        double res = (totalTime / threadCount) ; // Result as milliseconds
+        double res = (totalTime / threadCount) / 1000000 ; // Result as milliseconds
+
         //System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
         return res;
     }
