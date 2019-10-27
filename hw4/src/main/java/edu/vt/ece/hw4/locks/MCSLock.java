@@ -23,6 +23,11 @@ public class MCSLock implements Lock {
     }
 
     @Override
+    public boolean trylock() {
+        return false;
+    }
+
+    @Override
     public void lock() {
         QNode qnode = myNode.get();
         QNode pred = queue.getAndSet(qnode);

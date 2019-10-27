@@ -33,6 +33,11 @@ public class CLHLock implements Lock {
     }
 
     @Override
+    public boolean trylock() {
+        return false;
+    }
+
+    @Override
     public void lock() {
 
         QNode qnode = myNode.get();

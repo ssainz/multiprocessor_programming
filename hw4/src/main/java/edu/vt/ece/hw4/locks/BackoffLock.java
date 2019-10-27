@@ -16,6 +16,11 @@ public class BackoffLock implements Lock {
     }
 
     @Override
+    public boolean trylock() {
+        return false;
+    }
+
+    @Override
     public void lock() {
         Backoff backoff = BackoffFactory.getBackoff(this.backoffStrategy);
         while (true) {

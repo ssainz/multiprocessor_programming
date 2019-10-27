@@ -9,6 +9,11 @@ public class SpinSleepLock implements Lock {
     }
 
     @Override
+    public boolean trylock() {
+        return false;
+    }
+
+    @Override
     public void lock() {
     }
 

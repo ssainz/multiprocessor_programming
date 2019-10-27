@@ -21,6 +21,11 @@ public class ALock implements Lock {
     }
 
     @Override
+    public boolean trylock() {
+        return false;
+    }
+
+    @Override
     public void lock() {
         int slot = tail.getAndIncrement() % size;
         mySlotIndex.set(slot);

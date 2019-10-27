@@ -6,6 +6,11 @@ public class TestAndSpinLock implements Lock {
 
     private AtomicBoolean state = new AtomicBoolean(false);
 
+    @Override
+    public boolean trylock() {
+        return false;
+    }
+
     public void lock() {
         while (state.getAndSet(true)) {};  // ece.vt.edu.spin
 

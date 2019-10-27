@@ -15,6 +15,7 @@ public class Benchmark {
     private static final String MCSLOCK = "MCSLock";
     private static final String TASLOCK = "TASLock";
     private static final String TTASLOCK = "TTASLock";
+    private static final String PRIORITYQUEUELOCK = "PriorityQueueLock";
 
     public static void main(String[] args) throws Exception {
         String mode = args.length <= 0 ? "normal" : args[0];
@@ -28,6 +29,8 @@ public class Benchmark {
     }
 
     private static void run(String[] args, String mode, String lockClass, int threadCount, int iters) throws Exception {
+
+        String option = args.length < 5 ? "-" : args[4] ;
 
         double[] results = new double[5];
 
@@ -53,11 +56,20 @@ public class Benchmark {
                 case TASLOCK:
                     lock = new TestAndSpinLock();
                     break;
+                case PRIORITYQUEUELOCK:
+                    lock = new PriorityQueueLock(1000);
+                    break;
             }
 
             switch (mode.trim().toLowerCase()) {
                 case "normal":
-                    final Counter counter = new SharedCounter(0, lock);
+                    Counter counter = null;
+                    if(option.equals("Timeout")){
+                        counter = new SharedCounterTimeout(0, lock);
+                    }else{
+                        counter = new SharedCounter(0, lock);
+                    }
+
                     res = runNormal(counter, threadCount, iters);
                     break;
                 case "empty":
@@ -92,7 +104,7 @@ public class Benchmark {
         for(int i = 1 ; i < 5 ; i++){
             sum += results[i];
         }
-        String option = args.length < 5 ? "-" : args[4] ;
+
         System.out.println(String.format("[Lock = %s][%s][Threads = %d][Iter per thread = %d]avg: " + (sum/4), lockClass, option, threadCount, iters));
 
     }

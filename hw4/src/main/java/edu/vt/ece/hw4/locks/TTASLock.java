@@ -6,6 +6,11 @@ public class TTASLock implements Lock {
 
     private AtomicBoolean state = new AtomicBoolean(false);
 
+    @Override
+    public boolean trylock() {
+        return false;
+    }
+
     public void lock() {
         while (true) {
             while (state.get()) {};  // ece.vt.edu.spin
