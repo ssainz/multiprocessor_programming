@@ -60,10 +60,12 @@ public class SpinSleepLock implements Lock {
             // Here idea is that soon another thread that was sleeping will wake up (once lag[(slot + 1) % size] = true)
             // We need to see if there are any threads waiting (threadsInLock)
             // Awake some thread :
-            System.out.println(String.format("Unlock[%s], Notifying [%s]",Thread.currentThread(), threads[(slot + maxSpin + 1) % size]));
-            while(threads[(slot + maxSpin + 1) % size].getState() == Thread.State.RUNNABLE){} // Wait until it becomes waiting
+
+            while(threads[(slot + maxSpin + 1) % size].getState() != Thread.State.WAITING){} // Wait until it becomes waiting
 
             synchronized (threads[(slot + maxSpin + 1) % size]){
+
+                System.out.println(String.format("Unlock[%s], Notifying [%s], its state is: [%d]",Thread.currentThread(), threads[(slot + maxSpin + 1) % size], threads[(slot + maxSpin + 1) % size].getState()));
                 threads[(slot + maxSpin + 1) % size].notify();
             }
         }
