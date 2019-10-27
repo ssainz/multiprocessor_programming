@@ -36,12 +36,14 @@ public class CLHLock implements Lock {
     public void lock() {
         System.out.println(String.format("Thread[%d]enterLock", Thread.currentThread().getId()));
         QNode pred = null;
-        synchronized(this){
-            QNode qnode = myNode.get();
-            qnode.locked = true;
-            pred = tail.getAndSet(qnode);
-            myPred.set(pred);
-        }
+        QNode qnode = myNode.get();
+        System.out.println(String.format("Thread[%d]enterLock:a", Thread.currentThread().getId()));
+        qnode.locked = true;
+        System.out.println(String.format("Thread[%d]enterLock:b", Thread.currentThread().getId()));
+        pred = tail.getAndSet(qnode);
+        System.out.println(String.format("Thread[%d]enterLock:c", Thread.currentThread().getId()));
+        myPred.set(pred);
+        System.out.println(String.format("Thread[%d]enterLock:d", Thread.currentThread().getId()));
         while(pred.locked){}
         System.out.println(String.format("Thread[%d]exitsLock", Thread.currentThread().getId()));
     }
