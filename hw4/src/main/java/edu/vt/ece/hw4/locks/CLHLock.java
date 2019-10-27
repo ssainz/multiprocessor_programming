@@ -34,23 +34,23 @@ public class CLHLock implements Lock {
 
     @Override
     public void lock() {
-        System.out.println(String.format("Thread[%d]enterLock", Thread.currentThread().getId()))
+        System.out.println(String.format("Thread[%d]enterLock", Thread.currentThread().getId()));
         QNode qnode = myNode.get();
         qnode.locked = true;
         QNode pred = tail.getAndSet(qnode);
         myPred.set(pred);
         while(pred.locked){}
-        System.out.println(String.format("Thread[%d]exitsLock", Thread.currentThread().getId()))
+        System.out.println(String.format("Thread[%d]exitsLock", Thread.currentThread().getId()));
     }
 
     @Override
     public void unlock() {
-        System.out.println(String.format("Thread[%d]enterUnLock", Thread.currentThread().getId()))
+        System.out.println(String.format("Thread[%d]enterUnLock", Thread.currentThread().getId()));
         QNode qnode = myNode.get();
         qnode.locked = false;
         myNode.set(myPred.get());
 
-        System.out.println(String.format("Thread[%d]exitsUnLock", Thread.currentThread().getId()))
+        System.out.println(String.format("Thread[%d]exitsUnLock", Thread.currentThread().getId()));
 
     }
 
