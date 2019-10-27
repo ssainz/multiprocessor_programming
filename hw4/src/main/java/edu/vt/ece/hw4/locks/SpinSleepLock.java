@@ -46,7 +46,7 @@ public class SpinSleepLock implements Lock {
                 System.out.println("AWAKE!");
             }
         }
-        System.out.println(String.format("Lock [%s] c",Thread.currentThread()));
+        System.out.println(String.format("Lock [%s] c, waiting flag[%d] to be true",Thread.currentThread(), slot));
         while(!flag[slot]){}
         System.out.println(String.format("Lock [%s] d",Thread.currentThread()));
     }
@@ -66,11 +66,11 @@ public class SpinSleepLock implements Lock {
 
             synchronized (threads[(slot + maxSpin + 1) % size]){
 
-                System.out.println(String.format("Unlock[%s], slot=[],Notifying [%s], state=[%s]",Thread.currentThread(), (slot + maxSpin + 1) % size, threads[(slot + maxSpin + 1) % size], threads[(slot + maxSpin + 1) % size].getState()));
+                System.out.println(String.format("Unlock[%s], slot=[%d],Notifying [%s], state=[%s]",Thread.currentThread(), (slot + maxSpin + 1) % size, threads[(slot + maxSpin + 1) % size], threads[(slot + maxSpin + 1) % size].getState()));
                 threads[(slot + maxSpin + 1) % size].notifyAll();
             }
         }
-        System.out.println(String.format("Unlock [%s]c",Thread.currentThread()));
+        System.out.println(String.format("Unlock [%s]c, set flag[%d] to true",Thread.currentThread(), (slot + 1) % size));
         flag[slot] = false;
         flag[(slot + 1) % size] = true;
 
