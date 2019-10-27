@@ -36,6 +36,9 @@ public class BarrierThread extends Thread implements ThreadId {
 
         long end = System.nanoTime();
         bar();
+        if(end - start > 0){
+            System.out.println(end - start);
+        }
         elapsed += end - start;
     }
 
