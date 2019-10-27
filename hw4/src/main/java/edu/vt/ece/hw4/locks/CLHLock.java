@@ -48,7 +48,9 @@ public class CLHLock implements Lock {
         System.out.println(String.format("Thread[%d]enterUnLock", Thread.currentThread().getId()));
         QNode qnode = myNode.get();
         qnode.locked = false;
-        myNode.set(myPred.get());
+        QNode pred = myPred.get();
+        pred.locked = false;
+        myNode.set(pred);
 
         System.out.println(String.format("Thread[%d]exitsUnLock", Thread.currentThread().getId()));
 
