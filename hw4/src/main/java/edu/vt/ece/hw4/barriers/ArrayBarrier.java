@@ -17,9 +17,9 @@ public class ArrayBarrier implements Barrier {
     public void enter(int threadId) {
         int id = threadId;
 
-        while(flags[id-1] == 0){}
-
-
+        if(id != 0){
+            while(flags[id-1] == 0){}
+        }
 
         if(id == totalThread - 1){
             flags[id] = 2;
