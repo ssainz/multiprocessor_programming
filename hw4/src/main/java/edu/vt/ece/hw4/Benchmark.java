@@ -96,6 +96,7 @@ public class Benchmark {
                     res = runBarrier(b, threadCount, iters);
                     break;
                 default:
+                    System.out.println(mode.trim().toLowerCase());
                     throw new UnsupportedOperationException("Implement this");
             }
             results[i] = res;
