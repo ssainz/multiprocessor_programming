@@ -15,7 +15,8 @@ public class PriorityBasedThread extends Thread implements ThreadId {
 
     public PriorityBasedThread(Counter counter, int iter) {
         id = Thread.currentThread().getId();
-        priority = (int) ((getThreadId() % 5 ) + 1);
+        priority = (int) ((id % 5 ) + 1);
+
         this.counter = counter;
         this.iter = iter;
     }
@@ -41,6 +42,7 @@ public class PriorityBasedThread extends Thread implements ThreadId {
     }
 
     public long getElapsedTime() {
+        System.out.println(String.format("Priority[%d],time[%d]",priority,elapsed));
         return elapsed;
     }
 }

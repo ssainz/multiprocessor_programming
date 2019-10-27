@@ -159,6 +159,7 @@ public class Benchmark {
         for (int t = 0; t < threadCount; t++) {
             threads[t].join();
             totalTime += threads[t].getElapsedTime();
+
         }
 
         double res = totalTime / threadCount;
