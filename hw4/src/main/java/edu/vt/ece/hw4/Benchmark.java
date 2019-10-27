@@ -5,16 +5,16 @@ import edu.vt.ece.hw4.barriers.Barrier;
 import edu.vt.ece.hw4.barriers.TTASBarrier;
 import edu.vt.ece.hw4.barriers.VolatileArrayBarrier;
 import edu.vt.ece.hw4.bench.*;
-import edu.vt.ece.hw4.locks.ALock;
-import edu.vt.ece.hw4.locks.BackoffLock;
-import edu.vt.ece.hw4.locks.Lock;
-import edu.vt.ece.hw4.locks.MCSLock;
+import edu.vt.ece.hw4.locks.*;
 
 public class Benchmark {
 
     private static final String ALOCK = "ALock";
     private static final String BACKOFFLOCK = "BackoffLock";
+    private static final String CLHLOCK = "CLHLock";
     private static final String MCSLOCK = "MCSLock";
+    private static final String TASLOCK = "TASLock";
+    private static final String TTASLOCK = "TTASLock";
 
     public static void main(String[] args) throws Exception {
         String mode = args.length <= 0 ? "normal" : args[0];
@@ -43,6 +43,15 @@ public class Benchmark {
                     break;
                 case MCSLOCK:
                     lock = new MCSLock();
+                    break;
+                case CLHLOCK:
+                    lock = new CLHLock();
+                    break;
+                case TTASLOCK:
+                    lock = new TTASLock();
+                    break;
+                case TASLOCK:
+                    lock = new TestAndSpinLock();
                     break;
             }
 
