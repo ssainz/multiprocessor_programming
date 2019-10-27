@@ -9,6 +9,7 @@ public class SpinSleepLock implements Lock {
         }
     };
     public AtomicInteger tail ;
+    public AtomicInteger head ;
     public AtomicInteger numberOfThreadsInLock ;
     public volatile boolean[] flag;
     public volatile Thread[] threads = null;
@@ -17,6 +18,7 @@ public class SpinSleepLock implements Lock {
 
     public SpinSleepLock(int capacity, int maxSpin) {
         tail = new AtomicInteger(0);
+        head = new AtomicInteger(0);
         numberOfThreadsInLock = new AtomicInteger(0);
         threads = new Thread[capacity];
         flag = new boolean[capacity];
@@ -30,9 +32,11 @@ public class SpinSleepLock implements Lock {
     @Override
     public void lock() {
         System.out.println(String.format("Lock [%s]",Thread.currentThread()));
-        int slot = tail.getAndIncrement() % size;
+        int tailSlot = tail.getAndIncrement();
+        int slot =  tailSlot % size;
         threads[slot] = Thread.currentThread();
-        int threadsInLock = numberOfThreadsInLock.getAndIncrement() + 1;
+        int headSlot = head.get();
+        int threadsInLock = tailSlot - headSlot + 1;
         mySlotIndex.set(slot);
         System.out.println(String.format("Lock [%s] a",Thread.currentThread()));
         if(threadsInLock  - 1 > maxSpin){
@@ -48,6 +52,7 @@ public class SpinSleepLock implements Lock {
         }
         System.out.println(String.format("Lock [%s] c, waiting flag[%d] to be true, [threadsInLock-1 = %d]>[maxSpin= %d] ",Thread.currentThread(), slot, threadsInLock-1, maxSpin));
         while(!flag[slot]){}
+        head.set(slot);
         System.out.println(String.format("Lock [%s] d",Thread.currentThread()));
     }
 
@@ -55,7 +60,9 @@ public class SpinSleepLock implements Lock {
     public void unlock() {
         System.out.println(String.format("Unlock [%s]",Thread.currentThread()));
         int slot = mySlotIndex.get();
-        int threadsInLock = numberOfThreadsInLock.getAndDecrement() - 1; // without itself.
+        int tailSlot = tail.get();
+        int headSlot = head.get();
+        int threadsInLock = tailSlot - headSlot + 1; // without itself.
         System.out.println(String.format("Unlock [%s]b, threadsInLock=[%d],maxSpin[%d]",Thread.currentThread(),threadsInLock, maxSpin));
         if(threadsInLock  > maxSpin ){
             // Here idea is that soon another thread that was sleeping will wake up (once lag[(slot + 1) % size] = true)
