@@ -28,6 +28,7 @@ public class PriorityQueueLock implements Lock {
     public boolean trylock() {
         long start = System.currentTimeMillis();
         QNode qnode = myNode.get();
+        qnode.reset(); // clears status flags
         QNode latestWaiting = latestWaitingQNode.getAndSet(qnode);
         if(latestWaiting != null){
             qnode.locked = true;
@@ -53,7 +54,6 @@ public class PriorityQueueLock implements Lock {
     @Override
     public void lock() {
         QNode qnode = myNode.get();
-        qnode.reset(); // clears status flags
         QNode latestWaiting = latestWaitingQNode.getAndSet(qnode);
         if(latestWaiting != null){
             qnode.locked = true;
