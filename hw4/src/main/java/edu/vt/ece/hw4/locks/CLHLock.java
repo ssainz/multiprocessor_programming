@@ -19,9 +19,7 @@ public class CLHLock implements Lock {
 
 
     public CLHLock() {
-        QNode initial = new QNode();
-        initial.locked = false;
-        tail = new AtomicReference<QNode>(initial);
+        tail = new AtomicReference<QNode>(new QNode());
         myNode = new ThreadLocal<QNode>(){
             protected QNode initialValue(){
                 return new QNode();
@@ -45,8 +43,12 @@ public class CLHLock implements Lock {
 
     @Override
     public void unlock() {
+        //QNode qnode = myNode.get();
+        //qnode.locked = false;
+        //myNode.set(myPred.get());
         QNode qnode = myNode.get();
         qnode.locked = false;
+        myNode.remove();
         myNode.set(myPred.get());
     }
 
