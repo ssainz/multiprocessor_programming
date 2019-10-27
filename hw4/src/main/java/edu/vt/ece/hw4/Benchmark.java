@@ -3,6 +3,7 @@ package edu.vt.ece.hw4;
 import edu.vt.ece.hw4.barriers.ArrayBarrier;
 import edu.vt.ece.hw4.barriers.Barrier;
 import edu.vt.ece.hw4.barriers.TTASBarrier;
+import edu.vt.ece.hw4.barriers.VolatileArrayBarrier;
 import edu.vt.ece.hw4.bench.*;
 import edu.vt.ece.hw4.locks.ALock;
 import edu.vt.ece.hw4.locks.BackoffLock;
@@ -62,6 +63,8 @@ public class Benchmark {
                         b = new TTASBarrier(threadCount);
                     }else if (args[4].equals("arrayBarrier")){
                         b = new ArrayBarrier(threadCount);
+                    }else if (args[4].equals("volatileArrayBarrier")){
+                        b = new VolatileArrayBarrier(threadCount);
                     }else{
                         b = new ArrayBarrier(threadCount);
                     }
