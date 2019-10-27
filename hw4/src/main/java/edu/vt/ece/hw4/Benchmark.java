@@ -71,7 +71,7 @@ public class Benchmark {
                     res = runNormal(counter, threadCount, iters);
                     break;
 
-                case "normalPriority":
+                case "normalpriority":
                     res = runNormalPriority(counter, threadCount, iters);
                     break;
                 case "empty":
