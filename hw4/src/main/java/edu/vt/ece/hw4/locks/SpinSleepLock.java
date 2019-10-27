@@ -29,14 +29,15 @@ public class SpinSleepLock implements Lock {
 
     @Override
     public void lock() {
+        System.out.println(String.format("Lock [%s]",Thread.currentThread()));
         int slot = tail.getAndIncrement() % size;
         threads[slot] = Thread.currentThread();
         int threadsInLock = numberOfThreadsInLock.getAndIncrement() + 1;
         mySlotIndex.set(slot);
-
+        System.out.println(String.format("Lock [%s] a",Thread.currentThread()));
         if(threadsInLock  - 1 > maxSpin){
             try {
-
+                System.out.println(String.format("Lock [%s] b",Thread.currentThread()));
                 synchronized (Thread.currentThread()){
                     Thread.currentThread().wait();
                 }
@@ -44,26 +45,29 @@ public class SpinSleepLock implements Lock {
                 // Awake, continue:
             }
         }
-
+        System.out.println(String.format("Lock [%s] c",Thread.currentThread()));
         while(!flag[slot]){}
-
+        System.out.println(String.format("Lock [%s] d",Thread.currentThread()));
     }
 
     @Override
     public void unlock() {
+        System.out.println(String.format("Unlock [%s]",Thread.currentThread()));
         int slot = mySlotIndex.get();
         int threadsInLock = numberOfThreadsInLock.getAndDecrement() - 1; // without itself.
+        System.out.println(String.format("Unlock [%s]b",Thread.currentThread()));
         if(threadsInLock  > maxSpin ){
             // Here idea is that soon another thread that was sleeping will wake up (once lag[(slot + 1) % size] = true)
             // We need to see if there are any threads waiting (threadsInLock)
             // Awake some thread :
+            System.out.println(String.format("Unlock[%s], Notifying [%s]",Thread.currentThread(), threads[(slot + maxSpin + 1) % size]));
             while(threads[(slot + maxSpin + 1) % size].getState() == Thread.State.RUNNABLE){} // Wait until it becomes waiting
 
             synchronized (threads[(slot + maxSpin + 1) % size]){
                 threads[(slot + maxSpin + 1) % size].notify();
             }
         }
-
+        System.out.println(String.format("Unlock [%s]c",Thread.currentThread()));
         flag[slot] = false;
         flag[(slot + 1) % size] = true;
 
