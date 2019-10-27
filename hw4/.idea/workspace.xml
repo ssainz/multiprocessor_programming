@@ -58,12 +58,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="67" column="202" lean-forward="true" selection-start-line="67" selection-start-column="202" selection-end-line="67" selection-end-column="202" />
+            <state relative-caret-position="162">
+              <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
               <folding>
                 <element signature="e#166#277#0" expanded="true" />
                 <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#3127#3128#0" expanded="true" />
+                <element signature="e#3155#3156#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -695,12 +695,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="67" column="202" lean-forward="true" selection-start-line="67" selection-start-column="202" selection-end-line="67" selection-end-column="202" />
+        <state relative-caret-position="162">
+          <caret line="41" column="22" lean-forward="true" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
           <folding>
             <element signature="e#166#277#0" expanded="true" />
             <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#3127#3128#0" expanded="true" />
+            <element signature="e#3155#3156#0" expanded="true" />
           </folding>
         </state>
       </provider>
