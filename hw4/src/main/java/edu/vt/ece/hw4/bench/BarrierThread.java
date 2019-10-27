@@ -34,7 +34,7 @@ public class BarrierThread extends Thread implements ThreadId {
 
         barrier.enter(getThreadId()); // waiting for slower ones :P
 
-        long end = System.currentTimeMillis();
+        long end = System.nanoTime();
         bar();
         elapsed += end - start;
     }
