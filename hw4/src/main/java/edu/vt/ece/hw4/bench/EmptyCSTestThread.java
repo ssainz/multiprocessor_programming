@@ -28,7 +28,7 @@ public class EmptyCSTestThread extends Thread implements ThreadId {
         long start = System.currentTimeMillis();
         for (int i = 0; i < iter; i++) {
             synchronized(lock){lock.lock();};
-            synchronized (lock){lock.unlock();};
+            synchronized(lock){lock.unlock();};
         }
         elapsed = System.currentTimeMillis() - start;
     }
