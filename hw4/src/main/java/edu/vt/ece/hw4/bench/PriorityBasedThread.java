@@ -42,7 +42,7 @@ public class PriorityBasedThread extends Thread implements ThreadId {
     }
 
     public long getElapsedTime() {
-        System.out.println(String.format("Priority[%d],time[%d]",priority,elapsed));
+        System.out.println(String.format("[%d],Priority[%d],time[%d]",id,priority,elapsed));
         return elapsed;
     }
 }
