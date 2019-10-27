@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="13155291-a26d-4ff8-98d2-e1faa2f16e37" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/CLHLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/CLHLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/MCSLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/MCSLock.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -55,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/MCSLock.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="161">
@@ -86,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/CLHLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+            <state relative-caret-position="181">
+              <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding>
                 <element signature="e#547#672#0" expanded="true" />
                 <element signature="e#671#672#0" expanded="true" />
@@ -172,9 +171,9 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/TestAndSpinLock.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/Benchmark.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/bench/EmptyCSTestThread.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/CLHLock.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/spin/MCSLock.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/MCSLock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/CLHLock.java" />
       </list>
     </option>
   </component>
@@ -612,23 +611,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/MCSLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/CLHLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+        <state relative-caret-position="181">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
           <folding>
             <element signature="e#547#672#0" expanded="true" />
             <element signature="e#671#672#0" expanded="true" />
             <element signature="e#692#803#0" expanded="true" />
             <element signature="e#802#803#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/MCSLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
         </state>
       </provider>
     </entry>

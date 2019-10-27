@@ -35,10 +35,9 @@ public class CLHLock implements Lock {
     @Override
     public void lock() {
 
-        QNode pred = null;
         QNode qnode = myNode.get();
         qnode.locked = true;
-        pred = tail.getAndSet(qnode);
+        QNode pred = tail.getAndSet(qnode);
         myPred.set(pred);
         while(pred.locked){}
 
@@ -47,13 +46,9 @@ public class CLHLock implements Lock {
     @Override
     public void unlock() {
 
-        QNode pred = null;
         QNode qnode = myNode.get();
         qnode.locked = false;
-        pred = myPred.get();
-        myNode.set(pred);
-        qnode = myNode.get();
-        qnode.locked = false;
+        myNode.set(myPred.get());
 
     }
 
