@@ -19,7 +19,9 @@ public class CLHLock implements Lock {
 
 
     public CLHLock() {
-        tail = new AtomicReference<>(null);
+        QNode initial = new QNode();
+        initial.locked = false;
+        tail = new AtomicReference<QNode>(initial);
         myNode = new ThreadLocal<QNode>(){
             protected QNode initialValue(){
                 return new QNode();

@@ -61,7 +61,7 @@ public class Benchmark {
                     res = runNormal(counter, threadCount, iters);
                     break;
                 case "empty":
-                    runEmptyCS(lock, threadCount, iters);
+                    res = runEmptyCS(lock, threadCount, iters);
                     break;
                 case "long":
                     runLongCS(lock, threadCount, iters);
@@ -152,7 +152,7 @@ public class Benchmark {
         return res;
     }
 
-    private static void runEmptyCS(Lock lock, int threadCount, int iters) throws Exception {
+    private static double runEmptyCS(Lock lock, int threadCount, int iters) throws Exception {
 
         final EmptyCSTestThread[] threads = new EmptyCSTestThread[threadCount];
         TestThread.reset();
@@ -170,8 +170,8 @@ public class Benchmark {
             threads[t].join();
             totalTime += threads[t].getElapsedTime();
         }
-
-        System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
+        return totalTime / threadCount;
+        //System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
     }
 
     static void runLongCS(Lock lock, int threadCount, int iters) throws Exception {

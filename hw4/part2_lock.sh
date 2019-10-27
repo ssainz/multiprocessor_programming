@@ -13,12 +13,12 @@ java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty TTASLock 32 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty TTASLock 50 64000 
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty TTASLock 64 64000 
 echo "Backoff"
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 4 64000 fixed
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 8 64000 fixed
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 16 64000 fixed
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 32 64000 fixed
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 50 64000 fixed
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 64 64000 fixed
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 4 64000 Fixed
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 8 64000 Fixed
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 16 64000 Fixed
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 32 64000 Fixed
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 50 64000 Fixed
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty BackoffLock 64 64000 Fixed
 echo "CLH"
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty CLHLock 4 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark empty CLHLock 8 64000
