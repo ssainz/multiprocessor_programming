@@ -2,9 +2,11 @@ package edu.vt.ece.hw4.barriers;
 
 import edu.vt.ece.hw4.locks.TTASLock;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class TTASBarrier implements Barrier {
     public TTASLock lock = new TTASLock();
-    public int counter = 0;
+    public AtomicInteger counter = new AtomicInteger(0);
     public int totalThread = 0;
 
     public TTASBarrier(int threadNumber){
@@ -14,14 +16,14 @@ public class TTASBarrier implements Barrier {
     @Override
     public void enter(int threadId) {
         lock.lock();
-        counter++;
+        counter.getAndIncrement();
         lock.unlock();
 
-        while(counter < totalThread){}
+        while(counter.get() < totalThread){}
     }
 
     @Override
     public void reset() {
-        counter = 0;
+        counter.set(0);
     }
 }
