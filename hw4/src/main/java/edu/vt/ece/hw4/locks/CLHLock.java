@@ -46,10 +46,15 @@ public class CLHLock implements Lock {
         //QNode qnode = myNode.get();
         //qnode.locked = false;
         //myNode.set(myPred.get());
-        QNode qnode = myNode.get();
-        qnode.locked = false;
-        myNode.remove();
-        myNode.set(myPred.get());
+        synchronized (myNode){
+            QNode qnode = myNode.get();
+            qnode.locked = false;
+        }
+        synchronized (myNode){
+            myNode.set(myPred.get());
+        }
+
+
     }
 
     static class QNode {     // Queue node inner class
