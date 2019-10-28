@@ -97,7 +97,12 @@ public class Benchmark {
                     res = runLongCS(lock, threadCount, iters);
                     break;
                 case "cluster":
-                    res = runClusterCS(lock, threadCount, iters, Integer.parseInt(option));
+                    if(lockClass.equals(BACKOFFLOCK)){
+                        res = runClusterCS(lock, threadCount, iters, 1);
+                    }else{
+                        res = runClusterCS(lock, threadCount, iters, Integer.parseInt(option));
+                    }
+
                     break;
                 case "barrier":
                     Barrier b = null;
