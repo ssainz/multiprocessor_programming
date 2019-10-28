@@ -1,27 +1,51 @@
 echo "Cluster 2" 
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 4 64000 2
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 8 64000 2
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 16 64000 2
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 32 64000 2
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 50 64000 2
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 64 64000 2
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 128 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 4 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 8 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 16 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 32 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 50 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 64 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 128 64000 2
 echo "Cluster 3" 
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 4 64000 3
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 8 64000 3
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 16 64000 3
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 32 64000 3
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 50 64000 3
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 64 64000 3
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 128 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 4 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 8 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 16 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 32 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 50 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 64 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 128 64000 3
 echo "Cluster 4" 
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 4 64000 4
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 8 64000 4
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 16 64000 4
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 32 64000 4
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 50 64000 4
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 64 64000 4
-java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SpinSleepLock 128 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 4 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 8 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 16 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 32 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 50 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 64 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster SimpleHLock 128 64000 4
+echo "Cluster 2" 
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 4 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 8 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 16 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 32 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 50 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 64 64000 2
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 128 64000 2
+echo "Cluster 3" 
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 4 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 8 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 16 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 32 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 50 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 64 64000 3
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 128 64000 3
+echo "Cluster 4" 
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 4 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 8 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 16 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 32 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 50 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 64 64000 4
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark cluster HBOLock 128 64000 4
 echo "SpinSleepLock"
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster SpinSleepLock 4 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster SpinSleepLock 8 64000
