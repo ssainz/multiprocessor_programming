@@ -2,12 +2,15 @@ package edu.vt.ece.hw4.utils;
 
 import edu.vt.ece.spin.ThreadID;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class ThreadCluster {
+
 
     /**
      * The next thread ID to be assigned
      **/
-    private static volatile int nextID = 0;
+    private static AtomicInteger nextID = new AtomicInteger(0);
 
     /**
      * My thread-local ID.
@@ -22,18 +25,18 @@ public class ThreadCluster {
      * When running multiple tests, reset thread id state
      **/
     public static void reset() {
-        nextID = 0;
+        nextID.set(0);
     }
     public static void set(int value) {
         threadID.set(value);
     }
 
-    public static int getCluster() {
-        return threadID.get() / 2;
+    public static int getCluster(int numClusters) {
+        return threadID.get() % numClusters;
     }
     private static class ThreadLocalID extends ThreadLocal<Integer> {
         protected synchronized Integer initialValue() {
-            return nextID++;
+            return nextID.getAndIncrement();
         }
     }
 }

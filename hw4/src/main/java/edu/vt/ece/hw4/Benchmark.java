@@ -18,6 +18,8 @@ public class Benchmark {
     private static final String PRIORITYQUEUELOCK = "PriorityQueueLock";
     private static final String SPINSLEEPLOCK = "SpinSleepLock";
     private static final String SPINSLEEPARRAYLOCK = "SpinSleepArrayLock";
+    private static final String SIMPLEHLOCK = "SimpleHLock";
+    private static final String HBOLOCK = "HBOLock";
 
     public static void main(String[] args) throws Exception {
         String mode = args.length <= 0 ? "normal" : args[0];
@@ -67,6 +69,12 @@ public class Benchmark {
                 case SPINSLEEPARRAYLOCK:
                     lock = new SpinSleepArrayLock(threadCount, (int) threadCount/3);
                     break;
+                case SIMPLEHLOCK:
+                    lock = new SimpleHLock(Integer.parseInt(option), threadCount);
+                    break;
+                case HBOLOCK:
+                    lock = new HBOLock(Integer.parseInt(option));
+                    break;
             }
             Counter counter = null;
             if(option.equals("Timeout")){
@@ -87,6 +95,9 @@ public class Benchmark {
                     break;
                 case "long":
                     res = runLongCS(lock, threadCount, iters);
+                    break;
+                case "cluster":
+                    res = runClusterCS(lock, threadCount, iters, Integer.parseInt(option));
                     break;
                 case "barrier":
                     Barrier b = null;
@@ -221,6 +232,32 @@ public class Benchmark {
     }
 
     static double runLongCS(Lock lock, int threadCount, int iters) throws Exception {
+        final Counter counter = new Counter(0);
+        final LongCSTestThread[] threads = new LongCSTestThread[threadCount];
+        TestThread.reset();
+
+        for (int t = 0; t < threadCount; t++) {
+            threads[t] = new LongCSTestThread(lock, counter, iters);
+        }
+
+        for (int t = 0; t < threadCount; t++) {
+            threads[t].start();
+        }
+
+        long totalTime = 0;
+        for (int t = 0; t < threadCount; t++) {
+            threads[t].join();
+            totalTime += threads[t].getElapsedTime();
+        }
+
+        return totalTime / threadCount;
+        //System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
+    }
+
+    static double runClusterCS(Lock lock, int threadCount, int iters, int cluster) throws Exception {
+        /**
+         * The cluster number is already sent to the lock object instance and the lock uses it in each call to the "getClusterId".
+         */
         final Counter counter = new Counter(0);
         final LongCSTestThread[] threads = new LongCSTestThread[threadCount];
         TestThread.reset();
