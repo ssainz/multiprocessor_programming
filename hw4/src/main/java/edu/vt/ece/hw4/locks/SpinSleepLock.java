@@ -62,22 +62,25 @@ public class SpinSleepLock implements Lock {
         System.out.println(String.format("Unlock [%s]",Thread.currentThread()));
         int slot = mySlotIndex.get();
         int tailSlot = tail.get() - 1;// there is always increment after getting tail.
-        int headSlot = head.get(); // This thread was the last one to set head. No concurrency problem.
-        int threadsInLock = tailSlot - headSlot ; // Does not count itself.
-        System.out.println(String.format("Unlock [%s]b, threadsInLock=[%d],maxSpin[%d]",Thread.currentThread(),threadsInLock, maxSpin));
-        if(threadsInLock  >= maxSpin ){
-            // Here idea is that soon another thread that was sleeping will wake up (once lag[(slot + 1) % size] = true)
-            // We need to see if there are any threads waiting (threadsInLock)
-            // Awake some thread :
-            System.out.println(String.format("Unlock [%s]b.2, Waiting for thread [%s] to start WAITING",Thread.currentThread(),threads[(slot + maxSpin + 1) % size]));
-            while(threads[(slot + maxSpin + 1) % size].getState() != Thread.State.WAITING){} // Wait until it becomes waiting
+        int newHeadSlot = head.get() + 1; // This thread was the last one to set head. No concurrency problem.
+        int threadsInLock = tailSlot - newHeadSlot ; // Does not count itself.
+        //System.out.println(String.format("Unlock [%s]b, threadsInLock=[%d],maxSpin[%d]",Thread.currentThread(),threadsInLock, maxSpin));
 
-            synchronized (threads[(slot + maxSpin + 1) % size]){
+        for(int i = 1 ; i + newHeadSlot <= tailSlot ; i++){
+            if(i <= maxSpin){
+                if(threads[ ( i + newHeadSlot % size)].getState() == Thread.State.WAITING){
+                    synchronized (threads[ ( i + newHeadSlot % size)]){
 
-                System.out.println(String.format("Unlock[%s], slot=[%d],Notifying [%s], state=[%s]",Thread.currentThread(), (slot + maxSpin + 1) % size, threads[(slot + maxSpin + 1) % size], threads[(slot + maxSpin + 1) % size].getState()));
-                threads[(slot + maxSpin + 1) % size].notifyAll();
+                        System.out.println(String.format("Unlock[%s], slot=[%d],Notifying [%s], state=[%s]",Thread.currentThread(), i + newHeadSlot % size, threads[i + newHeadSlot % size], threads[i + newHeadSlot % size].getState()));
+                        threads[ ( i + newHeadSlot % size)].notifyAll();
+                    }
+                }
+            }else{
+                break;
             }
         }
+
+
         System.out.println(String.format("Unlock [%s]c, set flag[%d] to true",Thread.currentThread(), (slot + 1) % size));
         flag[slot] = false;
         flag[(slot + 1) % size] = true;
