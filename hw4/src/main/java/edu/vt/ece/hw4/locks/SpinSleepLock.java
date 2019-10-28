@@ -79,7 +79,8 @@ public class SpinSleepLock implements Lock {
             iter = iter.next;
         }
 
-
+        // Potential problem if the next node is WAITING but it did not set as WAITING up until now. Say its pred is set but has not called WAITING...
+        // So far that has not happened :P
 
         //System.out.println(String.format("unlock:[%s]d:sets node[%s].locked as true",qnode.myThread, qnode.next.myThread));
 
