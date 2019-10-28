@@ -13,6 +13,7 @@ java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TASLock 16 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TASLock 32 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TASLock 50 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TASLock 64 64000
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TASLock 128 64000
 echo "TTAS"
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TTASLock 4 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TTASLock 8 64000
@@ -20,6 +21,7 @@ java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TTASLock 16 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TTASLock 32 64000 
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TTASLock 50 64000 
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TTASLock 64 64000 
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long TTASLock 128 64000 
 echo "Backoff"
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long BackoffLock 4 64000 Fixed
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long BackoffLock 8 64000 Fixed
@@ -27,6 +29,7 @@ java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long BackoffLock 16 64000 F
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long BackoffLock 32 64000 Fixed
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long BackoffLock 50 64000 Fixed
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long BackoffLock 64 64000 Fixed
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long BackoffLock 128 64000 Fixed
 echo "CLH"
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long CLHLock 4 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark long CLHLock 8 64000
