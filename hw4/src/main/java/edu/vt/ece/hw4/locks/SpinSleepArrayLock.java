@@ -17,6 +17,7 @@ public class SpinSleepArrayLock implements Lock {
     public int size = 0;
 
     public SpinSleepArrayLock(int capacity, int maxSpin) {
+        System.out.println("constructor");
         tail = new AtomicInteger(0);
         head = new AtomicInteger(0);
         numberOfThreadsInLock = new AtomicInteger(0);

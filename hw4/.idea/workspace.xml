@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13155291-a26d-4ff8-98d2-e1faa2f16e37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepArrayLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/Benchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepArrayLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepArrayLock.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -30,31 +27,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/bench/LongCSTestThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepArrayLock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="71" column="68" lean-forward="true" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
-              <folding>
-                <element signature="e#166#277#0" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#3866#3867#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="168">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepArrayLock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <folding>
+                <element signature="e#166#277#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#3909#3910#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+            <state relative-caret-position="217">
+              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3769#3770#0" expanded="true" />
@@ -108,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/Benchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2651">
-              <caret line="219" column="40" selection-start-line="219" selection-start-column="40" selection-end-line="219" selection-end-column="40" />
+            <state relative-caret-position="336">
+              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -641,13 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/bench/LongCSTestThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/bench/SharedCounter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -701,36 +691,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepArrayLock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="71" column="68" lean-forward="true" selection-start-line="71" selection-start-column="68" selection-end-line="71" selection-end-column="68" />
+        <state relative-caret-position="217">
+          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
           <folding>
-            <element signature="e#166#277#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#3866#3867#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3769#3770#0" expanded="true" />
+            <element signature="e#3797#3798#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/bench/LongCSTestThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/Benchmark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2651">
-          <caret line="219" column="40" selection-start-line="219" selection-start-column="40" selection-end-line="219" selection-end-column="40" />
+        <state relative-caret-position="336">
+          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepLock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepArrayLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        <state relative-caret-position="285">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3769#3770#0" expanded="true" />
-            <element signature="e#3797#3798#0" expanded="true" />
+            <element signature="e#166#277#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#3909#3910#0" expanded="true" />
           </folding>
         </state>
       </provider>
