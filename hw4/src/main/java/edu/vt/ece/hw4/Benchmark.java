@@ -34,7 +34,7 @@ public class Benchmark {
 
     private static void run(String[] args, String mode, String lockClass, int threadCount, int iters) throws Exception {
 
-        String option = args.length < 5 ? "-" : args[4] ;
+        String option = args.length < 5 ? "1" : args[4] ;
 
         double[] results = new double[5];
 
