@@ -26,12 +26,13 @@ public class SpinSleepLock implements Lock {
         QNode pred = queue.getAndSet(qnode);
         int nodeNumber = numberOfNodes.getAndIncrement();
 
-
+        System.out.println(String.format("lock:[%s]a",qnode.myThread));
 
         if (pred != null) {
             qnode.locked = true;
             pred.next = qnode;
 
+            System.out.println(String.format("lock:[%s]b",qnode.myThread));
             if(nodeNumber > maxSpin){
                 synchronized (qnode.myThread ){
                     try {
@@ -41,22 +42,25 @@ public class SpinSleepLock implements Lock {
                     }
                 }
             }
-
+            System.out.println(String.format("lock:[%s]c",qnode.myThread));
             while (qnode.locked) {
             }     // spin
+            System.out.println(String.format("lock:[%s]d",qnode.myThread));
         }
     }
 
     @Override
     public void unlock() {
+
         QNode qnode = myNode.get();
+        System.out.println(String.format("unlock:[%s]a",qnode.myThread));
         if (qnode.next == null) {
             if (queue.compareAndSet(qnode, null))
                 return;
             while (qnode.next == null) {
             } // spin
         }
-
+        System.out.println(String.format("unlock:[%s]b",qnode.myThread));
         //Awake other threads ahead:
         int counter = 0;
         QNode iter = qnode.next;
@@ -65,7 +69,7 @@ public class SpinSleepLock implements Lock {
             if(iter == null){
                 break;
             }
-
+            System.out.println(String.format("unlock:[%s]awakes[%s]c",qnode.myThread,iter.myThread));
             if(iter.myThread.getState() == Thread.State.WAITING){
                 synchronized (iter.myThread){
                     iter.myThread.notifyAll();
@@ -75,7 +79,7 @@ public class SpinSleepLock implements Lock {
             iter = iter.next;
         }
 
-
+        System.out.println(String.format("unlock:[%s]d:sets node[%s].locked as true",qnode.myThread, qnode.next.myThread));
         numberOfNodes.getAndDecrement();
         qnode.next.locked = false;
         qnode.next = null;
