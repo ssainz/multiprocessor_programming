@@ -53,7 +53,7 @@ public class SpinSleepLock implements Lock {
         }
         System.out.println(String.format("Lock [%s] c, waiting flag[%d] to be true, [threadsInLock= %d]>[maxSpin= %d] ",Thread.currentThread(), slot, threadsInLock, maxSpin));
         while(!flag[slot]){}
-        head.set(slot);
+        head.set(tailSlot);
         System.out.println(String.format("Lock [%s] d",Thread.currentThread()));
     }
 
