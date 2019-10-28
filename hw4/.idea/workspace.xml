@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13155291-a26d-4ff8-98d2-e1faa2f16e37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/Benchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepArrayLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepArrayLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SpinSleepLock.java" afterDir="false" />
-    </list>
+    <list default="true" id="13155291-a26d-4ff8-98d2-e1faa2f16e37" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -107,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/Benchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="64" column="79" lean-forward="true" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
+            <state relative-caret-position="290">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -726,8 +722,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/Benchmark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="64" column="79" lean-forward="true" selection-start-line="64" selection-start-column="79" selection-end-line="64" selection-end-column="79" />
+        <state relative-caret-position="290">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
