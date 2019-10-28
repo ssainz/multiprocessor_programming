@@ -26,19 +26,22 @@ public class SpinSleepLock implements Lock {
         QNode pred = queue.getAndSet(qnode);
         int nodeNumber = numberOfNodes.getAndIncrement();
 
-        if(nodeNumber > maxSpin){
-            synchronized (qnode.myThread ){
-                try {
-                    qnode.myThread.wait();
-                } catch (InterruptedException e) {
-                    // Interrupt.
-                }
-            }
-        }
+
 
         if (pred != null) {
             qnode.locked = true;
             pred.next = qnode;
+
+            if(nodeNumber > maxSpin){
+                synchronized (qnode.myThread ){
+                    try {
+                        qnode.myThread.wait();
+                    } catch (InterruptedException e) {
+                        // Interrupt.
+                    }
+                }
+            }
+
             while (qnode.locked) {
             }     // spin
         }
