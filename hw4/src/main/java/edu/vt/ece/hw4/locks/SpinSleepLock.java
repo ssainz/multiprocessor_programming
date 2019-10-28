@@ -32,7 +32,7 @@ public class SpinSleepLock implements Lock {
             qnode.locked = true;
             pred.next = qnode;
 
-            System.out.println(String.format("lock:[%s]b",qnode.myThread));
+            //System.out.println(String.format("lock:[%s]b",qnode.myThread));
             if(nodeNumber > maxSpin){
                 synchronized (qnode.myThread ){
                     try {
@@ -42,7 +42,7 @@ public class SpinSleepLock implements Lock {
                     }
                 }
             }
-            System.out.println(String.format("lock:[%s]c",qnode.myThread));
+            //System.out.println(String.format("lock:[%s]c",qnode.myThread));
             while (qnode.locked) {
             }     // spin
             System.out.println(String.format("lock:[%s]d",qnode.myThread));
@@ -60,7 +60,7 @@ public class SpinSleepLock implements Lock {
             while (qnode.next == null) {
             } // spin
         }
-        System.out.println(String.format("unlock:[%s]b",qnode.myThread));
+        //System.out.println(String.format("unlock:[%s]b",qnode.myThread));
         //Awake other threads ahead:
         int counter = 0;
         QNode iter = qnode.next;
@@ -69,7 +69,7 @@ public class SpinSleepLock implements Lock {
             if(iter == null){
                 break;
             }
-            System.out.println(String.format("unlock:[%s]awakes[%s]c",qnode.myThread,iter.myThread));
+            //System.out.println(String.format("unlock:[%s]awakes[%s]c",qnode.myThread,iter.myThread));
             if(iter.myThread.getState() == Thread.State.WAITING){
                 synchronized (iter.myThread){
                     iter.myThread.notifyAll();
