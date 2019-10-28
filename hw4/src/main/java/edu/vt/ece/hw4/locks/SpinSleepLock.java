@@ -66,7 +66,7 @@ public class SpinSleepLock implements Lock {
         int threadsInLock = tailSlot - newHeadSlot ; // Does not count itself.
         //System.out.println(String.format("Unlock [%s]b, threadsInLock=[%d],maxSpin[%d]",Thread.currentThread(),threadsInLock, maxSpin));
 
-        for(int i = 1 ; i + newHeadSlot <= tailSlot ; i++){
+        for(int i = 0 ; i + newHeadSlot <= tailSlot ; i++){
             if(i <= maxSpin){
                 if(threads[ ( i + newHeadSlot % size)].getState() == Thread.State.WAITING){
                     synchronized (threads[ ( i + newHeadSlot % size)]){
