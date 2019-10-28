@@ -26,7 +26,7 @@ public class SpinSleepLock implements Lock {
         QNode pred = queue.getAndSet(qnode);
         int nodeNumber = numberOfNodes.getAndIncrement();
 
-        System.out.println(String.format("lock:[%s]a",qnode.myThread));
+        //System.out.println(String.format("lock:[%s]a",qnode.myThread));
 
         if (pred != null) {
             qnode.locked = true;
@@ -45,15 +45,15 @@ public class SpinSleepLock implements Lock {
             //System.out.println(String.format("lock:[%s]c",qnode.myThread));
             while (qnode.locked) {
             }     // spin
-            System.out.println(String.format("lock:[%s]d",qnode.myThread));
+            //System.out.println(String.format("lock:[%s]d",qnode.myThread));
         }
     }
 
     @Override
     public void unlock() {
-
+        numberOfNodes.getAndDecrement();
         QNode qnode = myNode.get();
-        System.out.println(String.format("unlock:[%s]a",qnode.myThread));
+        //System.out.println(String.format("unlock:[%s]a",qnode.myThread));
         if (qnode.next == null) {
             if (queue.compareAndSet(qnode, null))
                 return;
@@ -79,8 +79,10 @@ public class SpinSleepLock implements Lock {
             iter = iter.next;
         }
 
-        System.out.println(String.format("unlock:[%s]d:sets node[%s].locked as true",qnode.myThread, qnode.next.myThread));
-        numberOfNodes.getAndDecrement();
+
+
+        //System.out.println(String.format("unlock:[%s]d:sets node[%s].locked as true",qnode.myThread, qnode.next.myThread));
+
         qnode.next.locked = false;
         qnode.next = null;
 
