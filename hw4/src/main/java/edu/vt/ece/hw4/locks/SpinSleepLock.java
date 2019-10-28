@@ -42,7 +42,7 @@ public class SpinSleepLock implements Lock {
         System.out.println(String.format("Lock [%s] a",Thread.currentThread()));
         if(threadsInLock > maxSpin){
             try {
-                System.out.println(String.format("Lock [%s] b",Thread.currentThread()));
+                System.out.println(String.format("Lock [%s] b, slot=[%d],threadsInLock[%d]>maxSpin[%d]",Thread.currentThread(),slot,threadsInLock,maxSpin));
                 synchronized (threads[slot]){
                     threads[slot].wait();
                 }
