@@ -16,7 +16,7 @@ public class Benchmark {
     private static final String TASLOCK = "TASLock";
     private static final String TTASLOCK = "TTASLock";
     private static final String PRIORITYQUEUELOCK = "PriorityQueueLock";
-    private static final String SPINSLEEPLOCK = "SpinSleepArrayLock";
+    private static final String SPINSLEEPLOCK = "SpinSleepLock";
 
     public static void main(String[] args) throws Exception {
         String mode = args.length <= 0 ? "normal" : args[0];
