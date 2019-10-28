@@ -16,7 +16,7 @@ public class Benchmark {
     private static final String TASLOCK = "TASLock";
     private static final String TTASLOCK = "TTASLock";
     private static final String PRIORITYQUEUELOCK = "PriorityQueueLock";
-    private static final String SPINSLEEPLOCK = "SpinSleepLock";
+    private static final String SPINSLEEPLOCK = "SpinSleepArrayLock";
 
     public static void main(String[] args) throws Exception {
         String mode = args.length <= 0 ? "normal" : args[0];
@@ -61,7 +61,7 @@ public class Benchmark {
                     lock = new PriorityQueueLock(1000);
                     break;
                 case SPINSLEEPLOCK:
-                    lock = new SpinSleepLock(threadCount, (int) threadCount/3);
+                    lock = new SpinSleepArrayLock(threadCount, (int) threadCount/3);
                     break;
             }
             Counter counter = null;
