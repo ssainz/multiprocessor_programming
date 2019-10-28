@@ -32,7 +32,7 @@ public class SpinSleepArrayLock implements Lock {
 
     @Override
     public void lock() {
-        //System.out.println(String.format("Lock [%s]",Thread.currentThread()));
+        System.out.println(String.format("Lock [%s]",Thread.currentThread()));
 
         int tailSlot = tail.getAndIncrement();
         int slot =  tailSlot % size;
@@ -40,7 +40,7 @@ public class SpinSleepArrayLock implements Lock {
         int headSlot = head.get();
         int threadsInLock = tailSlot - headSlot ; // Does not count self.
         mySlotIndex.set(slot);
-        //System.out.println(String.format("Lock [%s] a",Thread.currentThread()));
+        System.out.println(String.format("Lock [%s] a",Thread.currentThread()));
         if(threadsInLock > maxSpin){
             try {
                 //System.out.println(String.format("Lock [%s] b, slot=[%d],threadsInLock[%d]>maxSpin[%d]",Thread.currentThread(),slot,threadsInLock,maxSpin));
@@ -53,20 +53,20 @@ public class SpinSleepArrayLock implements Lock {
                 //System.out.println("AWAKE!");
             }
         }
-        //System.out.println(String.format("Lock [%s] c, waiting flag[%d] to be true, [threadsInLock= %d]>[maxSpin= %d] ",Thread.currentThread(), slot, threadsInLock, maxSpin));
+        System.out.println(String.format("Lock [%s] c, waiting flag[%d] to be true, [threadsInLock= %d]>[maxSpin= %d] ",Thread.currentThread(), slot, threadsInLock, maxSpin));
         while(!flag[slot]){}
         head.set(tailSlot);
-        //System.out.println(String.format("Lock [%s] d",Thread.currentThread()));
+        System.out.println(String.format("Lock [%s] d",Thread.currentThread()));
     }
 
     @Override
     public void unlock() {
-        //System.out.println(String.format("Unlock [%s]",Thread.currentThread()));
+        System.out.println(String.format("Unlock [%s]",Thread.currentThread()));
         int slot = mySlotIndex.get();
         int tailSlot = tail.get() - 1;// there is always increment after getting tail.
         int newHeadSlot = head.get() + 1; // This thread was the last one to set head. No concurrency problem.
         int threadsInLock = tailSlot - newHeadSlot ; // Does not count itself.
-        //System.out.println(String.format("Unlock [%s]b, threadsInLock=[%d],maxSpin[%d]",Thread.currentThread(),threadsInLock, maxSpin));
+        System.out.println(String.format("Unlock [%s]b, threadsInLock=[%d],maxSpin[%d]",Thread.currentThread(),threadsInLock, maxSpin));
 
         for(int i = 0 ; i + newHeadSlot <= tailSlot ; i++){
             if(i <= maxSpin){
