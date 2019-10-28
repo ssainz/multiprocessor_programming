@@ -64,7 +64,10 @@ public class SpinSleepLock implements Lock {
             }
 
             if(iter.myThread.getState() == Thread.State.WAITING){
-                iter.myThread.notifyAll();
+                synchronized (iter.myThread){
+                    iter.myThread.notifyAll();
+                }
+
             }
             iter = iter.next;
         }
