@@ -32,14 +32,15 @@ public class SpinSleepLock implements Lock {
     @Override
     public void lock() {
         System.out.println(String.format("Lock [%s]",Thread.currentThread()));
+
         int tailSlot = tail.getAndIncrement();
         int slot =  tailSlot % size;
         threads[slot] = Thread.currentThread();
         int headSlot = head.get();
-        int threadsInLock = tailSlot - headSlot + 1;
+        int threadsInLock = tailSlot - headSlot ; // Does not count self.
         mySlotIndex.set(slot);
         System.out.println(String.format("Lock [%s] a",Thread.currentThread()));
-        if(threadsInLock  - 1 > maxSpin){
+        if(threadsInLock > maxSpin){
             try {
                 System.out.println(String.format("Lock [%s] b",Thread.currentThread()));
                 synchronized (threads[slot]){
@@ -60,9 +61,9 @@ public class SpinSleepLock implements Lock {
     public void unlock() {
         System.out.println(String.format("Unlock [%s]",Thread.currentThread()));
         int slot = mySlotIndex.get();
-        int tailSlot = tail.get();
-        int headSlot = head.get();
-        int threadsInLock = tailSlot - headSlot + 1; // without itself.
+        int tailSlot = tail.get() - 1;// there is always increment after getting tail.
+        int headSlot = head.get(); // This thread was the last one to set head. No concurrency problem.
+        int threadsInLock = tailSlot - headSlot ; // Does not count itself.
         System.out.println(String.format("Unlock [%s]b, threadsInLock=[%d],maxSpin[%d]",Thread.currentThread(),threadsInLock, maxSpin));
         if(threadsInLock  > maxSpin ){
             // Here idea is that soon another thread that was sleeping will wake up (once lag[(slot + 1) % size] = true)
