@@ -39,7 +39,7 @@ public class SpinSleepLock implements Lock {
         int headSlot = head.get();
         int threadsInLock = tailSlot - headSlot ; // Does not count self.
         mySlotIndex.set(slot);
-        System.out.println(String.format("Lock [%s] a",Thread.currentThread()));
+        //System.out.println(String.format("Lock [%s] a",Thread.currentThread()));
         if(threadsInLock > maxSpin){
             try {
                 System.out.println(String.format("Lock [%s] b, slot=[%d],threadsInLock[%d]>maxSpin[%d]",Thread.currentThread(),slot,threadsInLock,maxSpin));
