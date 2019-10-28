@@ -86,7 +86,7 @@ public class Benchmark {
                     res = runEmptyCS(lock, threadCount, iters);
                     break;
                 case "long":
-                    runLongCS(lock, threadCount, iters);
+                    res = runLongCS(lock, threadCount, iters);
                     break;
                 case "barrier":
                     Barrier b = null;
@@ -220,7 +220,7 @@ public class Benchmark {
         //System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
     }
 
-    static void runLongCS(Lock lock, int threadCount, int iters) throws Exception {
+    static double runLongCS(Lock lock, int threadCount, int iters) throws Exception {
         final Counter counter = new Counter(0);
         final LongCSTestThread[] threads = new LongCSTestThread[threadCount];
         TestThread.reset();
@@ -239,6 +239,7 @@ public class Benchmark {
             totalTime += threads[t].getElapsedTime();
         }
 
-        System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
+        return totalTime / threadCount;
+        //System.out.println("Average time per thread is " + totalTime / threadCount + "ms");
     }
 }
