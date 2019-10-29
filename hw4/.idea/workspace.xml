@@ -48,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SimpleHLock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="98" column="126" selection-start-line="98" selection-start-column="126" selection-end-line="98" selection-end-column="126" />
+            <state relative-caret-position="211">
+              <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#208#209#0" expanded="true" />
@@ -782,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw4/locks/SimpleHLock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="98" column="126" selection-start-line="98" selection-start-column="126" selection-end-line="98" selection-end-column="126" />
+        <state relative-caret-position="211">
+          <caret line="79" column="12" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#208#209#0" expanded="true" />

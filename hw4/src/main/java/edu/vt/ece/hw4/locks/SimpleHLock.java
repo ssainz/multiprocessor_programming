@@ -76,7 +76,7 @@ public class SimpleHLock implements Lock {
         System.out.println(String.format("UNLOCK:Thread[%s][%d]a",Thread.currentThread(),clusterId));
         int countOfThreadsWaitingInCluster = countWaitingThreads.decrementAndGet(clusterId);
         Lock localLock = localLocks[clusterId];
-        if(BATCH_SIZE < countOfUse){
+        if(BATCH_SIZE <= countOfUse){
             System.out.println(String.format("UNLOCK:Thread[%s][%d][BATCH= %d < countOfUse %d]b",Thread.currentThread(),clusterId,BATCH_SIZE, countOfUse));
             localLock.unlock();
             globalLock.unlock(); // For fairness
