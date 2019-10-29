@@ -32,7 +32,7 @@ public class SimpleHLock implements Lock {
             //localLocks[i] = new SpinSleepLock(0,maxSpin); // Long waits in 128 cores.
             //localLocks[i] = new BackoffLock("Fixed"); // Longer than TAS
             //localLocks[i] = new CLHLock(); // About same as TAS
-            localLocks[i] = new MCSLock()
+            localLocks[i] = new MCSLock();
             //localLocks[i] = new TTASLock(); // Somehow takes longer than TAS.
             //localLocks[i] = new TestAndSpinLock();
 
