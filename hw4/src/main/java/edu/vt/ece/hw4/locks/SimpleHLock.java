@@ -20,12 +20,12 @@ public class SimpleHLock implements Lock {
     public SimpleHLock(int clusters, int numThreads) {
         BATCH_SIZE = numThreads/clusters;
         numClusters = clusters;
-        globalLock = new TestAndSpinLock();
+        globalLock = new SpinSleepLock();
         localLocks = new Lock[clusters];
         willReleaseGlobalLock = new AtomicBoolean(true);
         for(int i = 0 ; i < clusters ; i++){
             //localLocks[i] = new SpinSleepLock(0,numThreads/clusters/3);
-            localLocks[i] = new TestAndSpinLock();
+            localLocks[i] = new TTASLock();
         }
 
         countWaitingThreads = new AtomicIntegerArray(clusters);
