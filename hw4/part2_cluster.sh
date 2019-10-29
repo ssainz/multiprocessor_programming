@@ -61,6 +61,7 @@ java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TASLock 16 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TASLock 32 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TASLock 50 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TASLock 64 64000
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TASLock 128 64000
 echo "TTAS"
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TTASLock 4 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TTASLock 8 64000
@@ -68,6 +69,7 @@ java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TTASLock 16 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TTASLock 32 64000 
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TTASLock 50 64000 
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TTASLock 64 64000 
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  TTASLock 128 64000 
 echo "Backoff"
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  BackoffLock 4 64000 Fixed
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  BackoffLock 8 64000 Fixed
@@ -75,16 +77,23 @@ java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  BackoffLock 16 64
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  BackoffLock 32 64000 Fixed
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  BackoffLock 50 64000 Fixed
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  BackoffLock 64 64000 Fixed
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  BackoffLock 128 64000 Fixed
 echo "CLH"
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  CLHLock 4 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  CLHLock 8 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  CLHLock 16 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  CLHLock 32 64000
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  CLHLock 50 64000
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  CLHLock 64 64000
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  CLHLock 128 64000
 echo "MCS"
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  MCSLock 4 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  MCSLock 8 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  MCSLock 16 64000
 java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  MCSLock 32 64000
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  MCSLock 50 64000
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  MCSLock 64 64000
+java -cp build/libs/hw4.jar edu.vt.ece.hw4.Benchmark  cluster  MCSLock 128 64000
 
 
 
