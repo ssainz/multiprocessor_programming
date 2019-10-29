@@ -27,7 +27,8 @@ public class SimpleHLock implements Lock {
         willReleaseGlobalLock = new AtomicBoolean(true);
         for(int i = 0 ; i < clusters ; i++){
             //localLocks[i] = new SpinSleepLock(0,numThreads/clusters/3);
-            localLocks[i] = new SpinSleepLock(0,maxSpin);
+            //localLocks[i] = new SpinSleepLock(0,maxSpin);
+            localLocks[i] = new TTASLock();
         }
 
         countWaitingThreads = new AtomicIntegerArray(clusters);
