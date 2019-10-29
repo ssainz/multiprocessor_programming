@@ -23,6 +23,7 @@ public class SimpleHLock implements Lock {
         maxSpin = Math.max(1, maxSpin);
         numClusters = clusters;
         //globalLock = new TTASLock();
+        //globalLock = new TestAndSpinLock();
         globalLock = new TestAndSpinLock();
         localLocks = new Lock[clusters];
         willReleaseGlobalLock = new AtomicBoolean(true);
@@ -30,7 +31,8 @@ public class SimpleHLock implements Lock {
             //localLocks[i] = new SpinSleepLock(0,numThreads/clusters/3);
             //localLocks[i] = new SpinSleepLock(0,maxSpin);
             //localLocks[i] = new TTASLock();
-            localLocks[i] = new TestAndSpinLock();
+            //localLocks[i] = new TestAndSpinLock();
+            localLocks[i] = new SpinSleepLock();
         }
 
         countWaitingThreads = new AtomicIntegerArray(clusters);
