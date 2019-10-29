@@ -22,13 +22,15 @@ public class SimpleHLock implements Lock {
         int maxSpin = (int) BATCH_SIZE / 3;
         maxSpin = Math.max(1, maxSpin);
         numClusters = clusters;
-        globalLock = new TTASLock();
+        //globalLock = new TTASLock();
+        globalLock = new TestAndSpinLock();
         localLocks = new Lock[clusters];
         willReleaseGlobalLock = new AtomicBoolean(true);
         for(int i = 0 ; i < clusters ; i++){
             //localLocks[i] = new SpinSleepLock(0,numThreads/clusters/3);
             //localLocks[i] = new SpinSleepLock(0,maxSpin);
-            localLocks[i] = new TTASLock();
+            //localLocks[i] = new TTASLock();
+            localLocks[i] = new TestAndSpinLock();
         }
 
         countWaitingThreads = new AtomicIntegerArray(clusters);
