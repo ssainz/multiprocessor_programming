@@ -19,7 +19,7 @@ public class SimpleHLock implements Lock {
 
     public SimpleHLock(int clusters, int numThreads) {
         BATCH_SIZE = numThreads/clusters;
-        int maxSpin = (int) BATCH_SIZE / 3;
+        int maxSpin = (int) BATCH_SIZE / 2;
         maxSpin = Math.max(1, maxSpin);
         numClusters = clusters;
         //globalLock = new TTASLock();
@@ -30,7 +30,8 @@ public class SimpleHLock implements Lock {
         for(int i = 0 ; i < clusters ; i++){
             //localLocks[i] = new SpinSleepLock(0,numThreads/clusters/3);
             //localLocks[i] = new SpinSleepLock(0,maxSpin); // Long waits in 128 cores.
-            localLocks[i] = new BackoffLock("Fixed"); // Long waits in 128 cores.
+            //localLocks[i] = new BackoffLock("Fixed"); // Longer than TAS
+            localLocks[i] = new CLHLock();
             //localLocks[i] = new TTASLock(); // Somehow takes longer than TAS.
             //localLocks[i] = new TestAndSpinLock();
 
