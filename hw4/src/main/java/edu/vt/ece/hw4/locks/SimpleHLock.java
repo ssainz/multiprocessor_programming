@@ -40,21 +40,25 @@ public class SimpleHLock implements Lock {
     @Override
     public void lock() {
 
+
         int clusterId = ThreadCluster.getCluster(numClusters);
+
+        System.out.println(String.format("LOCK:Thread[%s][%d]a",Thread.currentThread(),clusterId));
 
         Lock localLock = localLocks[clusterId];
 
-        countWaitingThreads.getAndIncrement(clusterId);
+        int waitingThreads = countWaitingThreads.getAndIncrement(clusterId);
         localLock.lock();
-
+        System.out.println(String.format("LOCK:Thread[%s][%d][waiting:%d]b",Thread.currentThread(),clusterId, waitingThreads));
 
         if(clusterId == previousOwner && willReleaseGlobalLock.compareAndSet(false,true)){
-
+            System.out.println(String.format("LOCK:Thread[%s][%d][waiting:%d]c:enterCS without globallock",Thread.currentThread(),clusterId, waitingThreads));
         }else{
+            System.out.println(String.format("LOCK:Thread[%s][%d]c:wait globallock",Thread.currentThread(),clusterId));
             globalLock.lock();
         }
 
-
+        System.out.println(String.format("LOCK:Thread[%s][%d]d:enter CS",Thread.currentThread(),clusterId));
 
         //For fairness, we start counting global lock usage:
         if(clusterId != previousOwner){
@@ -63,30 +67,35 @@ public class SimpleHLock implements Lock {
         }else{
             countOfUse++;
         }
-
+        System.out.println(String.format("LOCK:Thread[%s][%d][counterOfUse=%d]e:enter CS",Thread.currentThread(),clusterId, countOfUse));
     }
 
     @Override
     public void unlock() {
         int clusterId = ThreadCluster.getCluster(numClusters);
+        System.out.println(String.format("UNLOCK:Thread[%s][%d]a",Thread.currentThread(),clusterId));
         int countOfThreadsWaitingInCluster = countWaitingThreads.decrementAndGet(clusterId);
         Lock localLock = localLocks[clusterId];
         if(BATCH_SIZE < countOfUse){
+            System.out.println(String.format("UNLOCK:Thread[%s][%d][BATCH= %d < countOfUse %d]b",Thread.currentThread(),clusterId,BATCH_SIZE, countOfUse));
             localLock.unlock();
             globalLock.unlock(); // For fairness
             return;
         }
         if(countOfThreadsWaitingInCluster == 0){
+            System.out.println(String.format("UNLOCK:Thread[%s][%d][countOfThreadsWaitingInCluster is %d]c",Thread.currentThread(),clusterId,countOfThreadsWaitingInCluster));
             localLock.unlock(); // No one wants it.
             globalLock.unlock();
             return;
         }
 
         if(BATCH_SIZE > countOfUse){
+            System.out.println(String.format("UNLOCK:Thread[%s][%d][BATCH= %d > countOfUse %d]d",Thread.currentThread(),clusterId, countOfUse,BATCH_SIZE));
             willReleaseGlobalLock.set(false);
             localLock.unlock();
             return;
         }
 
+        System.out.println(String.format("UNLOCK:Thread[%s][%d][BATCH= %d , countOfUse %d, countOfThreadsWaitingInCluster %d]e",Thread.currentThread(),clusterId, countOfUse,BATCH_SIZE, countOfThreadsWaitingInCluster));
     }
 }
