@@ -10,6 +10,7 @@
 package lists;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * List using coarse-grained synchronization.
  * @param T Item type.
@@ -28,7 +29,7 @@ public class CoarseList<T> {
    * Synchronizes access to list
    */
   private Lock lock = new ReentrantLock();
-  
+
   /**
    * Constructor
    */
@@ -38,13 +39,13 @@ public class CoarseList<T> {
     tail  = new Node(Integer.MAX_VALUE);
     head.next = this.tail;
   }
-  
+
   /**
    * Add an element.
    * @param item element to add
    * @return true iff element was not there already
    */
-  
+
   public boolean add(T item) {
     Node pred, curr;
     int key = item.hashCode();
