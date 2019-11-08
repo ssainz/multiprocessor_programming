@@ -1,4 +1,2 @@
-src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java
-src/main/java/edu/vt/ece/hw5/bag/LockFreeList.java
 build
 .gradle
