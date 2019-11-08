@@ -43,7 +43,7 @@ public class Benchmark {
                         set = new OptimisticList();
                         break;
                     default:
-                        set = new CoarseList();
+                        System.exit(1);
                 }
 
                 double[] throughputs = new double[7];
@@ -87,7 +87,7 @@ public class Benchmark {
 
 
                 System.out.println(String.format("[%s\t][%d\t][%f\t][Avg.Throughput][Avg.Time]  %f \t %f", listType, threadCount , percentageOfContains, avgThroughput, avgTime) );
-
+                Dao.storeInDB(listType,threadCount,percentageOfContains, avgThroughput, avgTime);
             }
 
         }
