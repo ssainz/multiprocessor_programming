@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ce8da59-f1ac-450c-afce-b301a6073fe9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/set_evaluation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/set_evaluation.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Benchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Dao.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
