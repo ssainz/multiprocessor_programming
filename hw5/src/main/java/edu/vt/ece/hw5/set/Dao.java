@@ -26,7 +26,7 @@ public class Dao {
             }
 
             Statement stmt = conn.createStatement();
-            stmt.executeUpdate(String.format("INSERT INTO SET_RESULTS VALUES (%s,%d,%f,%f,%f)", setType, numberThreads, percentage, avgThroughput, avgTime));
+            stmt.executeUpdate(String.format("INSERT INTO SET_RESULTS (setType,numThreads,percentage,avgThroughput,avgTime) VALUES (%s,%d,%f,%f,%f)", setType, numberThreads, percentage, avgThroughput, avgTime));
             /*
             CREATE TABLE SET_RESULTS (
             setType varchar(50),
