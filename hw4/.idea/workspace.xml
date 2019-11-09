@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13155291-a26d-4ff8-98d2-e1faa2f16e37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/bag/LockFreeListForBag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/bag/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/bag/LockFreeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/bag/LockFreeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/CoarseList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/CoarseList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/FineList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/FineList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/LazyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/LazyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/LockFreeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/LockFreeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/OptimisticList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/src/main/java/edu/vt/ece/hw5/set/OptimisticList.java" afterDir="false" />
-    </list>
+    <list default="true" id="13155291-a26d-4ff8-98d2-e1faa2f16e37" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />

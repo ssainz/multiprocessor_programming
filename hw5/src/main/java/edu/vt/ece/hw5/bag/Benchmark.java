@@ -12,8 +12,9 @@ public class Benchmark {
 
         for(int i = 0 ; i < threadsNumber.length ; i++){
 
-            int threadCount = threadsNumber[i];
 
+            int threadCount = threadsNumber[i];
+            System.out.println("Start eval with " + threadCount + "threads");
             int times = 5;
 
             double[] throughputs1 = new double[5];
