@@ -94,8 +94,8 @@ public class Benchmark {
             System.out.println(s);
             System.out.println(s2);
 
-            Dao.storeInDBBAG("bag",threadCount, throughput1, avgTotTimes1);
-            Dao.storeInDBBAG("list",threadCount, throughput2, avgTotTimes2);
+            //Dao.storeInDBBAG("bag",threadCount, throughput1, avgTotTimes1);
+            //Dao.storeInDBBAG("list",threadCount, throughput2, avgTotTimes2);
 
         }
 
