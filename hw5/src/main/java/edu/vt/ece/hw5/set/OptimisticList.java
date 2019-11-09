@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Optimistic List implementation.
  * @param T Item type.
- * @author Maurice Herlihy
+ * @author Sergio
  */
 public class OptimisticList<T> implements ConcurrentSet<T>{
     /**

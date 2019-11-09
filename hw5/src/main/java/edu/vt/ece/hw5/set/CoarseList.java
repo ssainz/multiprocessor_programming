@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * List using coarse-grained synchronization.
  * @param T Item type.
- * @author Maurice Herlihy
+ * @author Sergio
  */
 public class CoarseList<T> implements ConcurrentSet<T> {
     /**

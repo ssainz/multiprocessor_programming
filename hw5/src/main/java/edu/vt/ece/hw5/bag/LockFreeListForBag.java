@@ -1,25 +1,21 @@
-package edu.vt.ece.hw5.set;
+package edu.vt.ece.hw5.bag;
 
 import java.util.concurrent.atomic.AtomicMarkableReference;
 
-/**
- * Lock-free List based on M. Michael's algorithm.
- *
- * @param T Item type.
- * @author Sergio
- */
-public class LockFreeList<T> implements ConcurrentSet<T>{
+public class LockFreeListForBag<T> {
     /**
      * First list node
      */
     volatile Node head;
 
+    Node tail;
+
     /**
      * Constructor
      */
-    public LockFreeList() {
+    public LockFreeListForBag() {
         this.head = new Node(Integer.MIN_VALUE);
-        Node tail = new Node(Integer.MAX_VALUE);
+        tail = new Node(Integer.MAX_VALUE);
         while (!head.next.compareAndSet(null, tail, false, false)) ;
     }
 
@@ -37,35 +33,35 @@ public class LockFreeList<T> implements ConcurrentSet<T>{
             Window window = find(head, key);
             Node pred = window.pred, curr = window.curr;
             // is the key present?
-            if (curr.key == key) {
+            /* if (curr.key == key) { // Allows for duplicates
                 return false;
-            } else {
-                // splice in new node
-                Node node = new Node(item);
-                node.next = new AtomicMarkableReference(curr, false);
-                if (pred.next.compareAndSet(curr, node, false, false)) {
-                    return true;
-                }
+            } else { */
+            // splice in new node
+            Node node = new Node(item);
+            node.next = new AtomicMarkableReference(curr, false);
+            if (pred.next.compareAndSet(curr, node, false, false)) {
+                return true;
             }
+            //}
         }
     }
 
     /**
      * Remove an element.
      *
-     * @param item element to remove
      * @return true iff element was present
      */
-    public boolean remove(T item) {
-        int key = item.hashCode();
+    public boolean remove() {
+
         boolean snip;
         while (true) {
+            int key = head.next.getReference().key; // head's next.
             // find predecessor and curren entries
             Window window = find(head, key);
             Node pred = window.pred, curr = window.curr;
             // is the key present?
-            if (curr.key != key) {
-                return false;
+            if (curr.key == Integer.MAX_VALUE) {
+                return false; // Got the tail. EMPTY!
             } else {
                 // snip out matching node
                 Node succ = curr.next.getReference();

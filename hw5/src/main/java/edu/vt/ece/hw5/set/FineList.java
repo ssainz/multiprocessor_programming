@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Fine-grained synchronization: lock coupling (hand-over-hand locking).
  * @param T Item type.
- * @author Maurice Herlihy
+ * @author Sergio
  */
 public class FineList<T> implements ConcurrentSet<T> {
     /**

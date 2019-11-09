@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * Lazy list implementation: lock-free contains method.
  * @param T Item type.
- * @author Maurice Herlihy
+ * @author Sergio
  */
 public class LazyList<T> implements ConcurrentSet<T>{
 
