@@ -8,14 +8,14 @@ public class Benchmark {
         //final int threadCount = Integer.parseInt(args[0]);
         final int iters = Integer.parseInt(args[0]);
 
-        //int[] threadsNumber = {4,9,14,19,20,24,29,35,40};
-        int[] threadsNumber = {4};
+        int[] threadsNumber = {4,9,14,19,20,24,29,35,40};
+        //int[] threadsNumber = {4};
 
         for(int i = 0 ; i < threadsNumber.length ; i++){
 
 
             int threadCount = threadsNumber[i];
-            System.out.println("Start eval with " + threadCount + " threads");
+
             int times = 5;
 
             double[] throughputs1 = new double[5];
@@ -24,7 +24,7 @@ public class Benchmark {
             double[] avgTimes2 = new double[5];
 
             for(int j = 0 ; j < times + 2; j++){
-
+                //System.out.println("Start eval with " + threadCount + " threads");
                 final TestThread[] threads = new TestThread[threadCount];
                 final LockFreeBag<Integer> bag = new LockFreeBag<>();
                 final LockFreeList<Integer> list = new LockFreeList<>();
@@ -51,7 +51,7 @@ public class Benchmark {
                 }
 
 
-
+                //System.out.println("End eval with " + threadCount + " threads");
 
 //                System.out.println("Bag: Throughput is " + (iters*threadCount) / (maxTime1*0.001) + "ops/s");
 //                System.out.println("Bag: Average time per thread is " + totalTime1 / threadCount + "ms");
