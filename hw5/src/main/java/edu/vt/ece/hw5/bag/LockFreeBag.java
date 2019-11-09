@@ -86,6 +86,8 @@ public class LockFreeBag<T extends Number> {
     }
 
     public void tryRemoveAny() {
+
+        //System.out.println("HIII");
         if(localNode == null){
             addToMainList();
         }
@@ -95,11 +97,16 @@ public class LockFreeBag<T extends Number> {
         if(!list.remove()){
 
             Node n = localNode.get().next;
+
+            System.out.print("n = "+ n);
+            System.out.print("tail = "+ tail);
             while(n.key < tail.key){
                 if(n.item.remove()){
                     return;
                 }
                 n = n.next;
+                System.out.print("n = "+ n);
+                System.out.print("tail = "+ tail);
             }
 
             // Start from beginning

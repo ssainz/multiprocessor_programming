@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3ce8da59-f1ac-450c-afce-b301a6073fe9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
+            <state relative-caret-position="218">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -59,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="97" column="23" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="23" />
+            <state relative-caret-position="205">
+              <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#596#812#0" expanded="true" />
@@ -148,9 +150,9 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeList.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeListForBag.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java" />
         <option value="$PROJECT_DIR$/bag_evaluation.sh" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java" />
       </list>
     </option>
   </component>
@@ -479,10 +481,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="97" column="23" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="23" />
+        <state relative-caret-position="205">
+          <caret line="89" column="10" selection-start-line="89" selection-start-column="10" selection-end-line="89" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#596#812#0" expanded="true" />
@@ -491,13 +500,6 @@
             <element signature="e#1281#1458#0" expanded="true" />
             <element signature="e#1457#1458#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="77" selection-start-line="16" selection-start-column="77" selection-end-line="16" selection-end-column="77" />
         </state>
       </provider>
     </entry>

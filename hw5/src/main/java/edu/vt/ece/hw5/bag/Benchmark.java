@@ -8,13 +8,14 @@ public class Benchmark {
         //final int threadCount = Integer.parseInt(args[0]);
         final int iters = Integer.parseInt(args[0]);
 
-        int[] threadsNumber = {4,9,14,19,20,24,29,35,40};
+        //int[] threadsNumber = {4,9,14,19,20,24,29,35,40};
+        int[] threadsNumber = {4};
 
         for(int i = 0 ; i < threadsNumber.length ; i++){
 
 
             int threadCount = threadsNumber[i];
-            System.out.println("Start eval with " + threadCount + "threads");
+            System.out.println("Start eval with " + threadCount + " threads");
             int times = 5;
 
             double[] throughputs1 = new double[5];
