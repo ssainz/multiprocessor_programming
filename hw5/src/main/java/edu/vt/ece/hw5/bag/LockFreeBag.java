@@ -98,15 +98,15 @@ public class LockFreeBag<T extends Number> {
 
             Node n = localNode.get().next;
 
-            System.out.print("n = "+ n);
-            System.out.print("tail = "+ tail);
+            System.out.println("n = "+ n);
+            System.out.println("tail = "+ tail);
             while(n.key < tail.key){
                 if(n.item.remove()){
                     return;
                 }
                 n = n.next;
-                System.out.print("n = "+ n);
-                System.out.print("tail = "+ tail);
+                System.out.println("n = "+ n);
+                System.out.println("tail = "+ tail);
             }
 
             // Start from beginning
