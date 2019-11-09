@@ -6,7 +6,7 @@ public class Benchmark {
 
     public static void main(String[] args) throws Exception {
         //final int threadCount = Integer.parseInt(args[0]);
-        final int iters = Integer.parseInt(args[1]);
+        final int iters = Integer.parseInt(args[0]);
 
         int[] threadsNumber = {4,9,14,19,20,24,29,35,40};
 
