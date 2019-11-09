@@ -20,9 +20,9 @@ public class Dao {
                 "jdbc:postgresql://hw5.ctbqkxvip5yo.us-east-1.rds.amazonaws.com:5432/postgres", "postgres", "rushrush")) {
 
             if (conn != null) {
-                System.out.println("Connected to the database!");
+                //System.out.println("Connected to the database!");
             } else {
-                System.out.println("Failed to make connection!");
+                //System.out.println("Failed to make connection!");
             }
 
             Statement stmt = conn.createStatement();
@@ -40,9 +40,9 @@ public class Dao {
              */
 
         } catch (SQLException e) {
-            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+            //System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             return false;
         }
 
