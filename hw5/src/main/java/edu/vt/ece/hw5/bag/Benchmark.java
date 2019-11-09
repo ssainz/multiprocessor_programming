@@ -1,5 +1,7 @@
 package edu.vt.ece.hw5.bag;
 
+import edu.vt.ece.hw5.set.Dao;
+
 import java.util.concurrent.CyclicBarrier;
 
 public class Benchmark {
@@ -91,6 +93,9 @@ public class Benchmark {
 
             System.out.println(s);
             System.out.println(s2);
+
+            Dao.storeInDBBAG("bag",threadCount, throughput1, avgTotTimes1);
+            Dao.storeInDBBAG("list",threadCount, throughput2, avgTotTimes2);
 
         }
 
