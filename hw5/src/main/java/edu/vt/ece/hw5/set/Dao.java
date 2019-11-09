@@ -70,7 +70,7 @@ public class Dao {
             Statement stmt = conn.createStatement();
             String stmtStr = String.format("INSERT INTO set_results_bag (setType,numThreads,avgThroughput,avgTime) VALUES ('%s',%d,%f,%f);", setType, numberThreads, avgThroughput, avgTime);
             stmt.executeUpdate(stmtStr);
-            //System.out.println(stmtStr);
+            System.out.println(stmtStr);
             /*
             CREATE TABLE SET_RESULTS (
             setType varchar(50),
@@ -82,9 +82,9 @@ public class Dao {
              */
 
         } catch (SQLException e) {
-            //System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
+            System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
         } catch (Exception e) {
-            //e.printStackTrace();
+            e.printStackTrace();
             return false;
         }
 

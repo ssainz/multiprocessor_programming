@@ -31,10 +31,8 @@ public class LockFreeBag<T extends Number> {
 
 
         //lock.lock();
-        //System.out.println("addToMainList:" +Thread.currentThread().getId() + " enter lock");
         synchronized (this){
             //try {
-                //System.out.println("addToMainList:" +Thread.currentThread().getId() + " localNode .get()" + localNode.get());
                 Node pred, curr;
                 int key = localNode.get().hashCode();
                 pred = head;
@@ -50,12 +48,9 @@ public class LockFreeBag<T extends Number> {
                     Node node = localNode.get();
                     node.next = curr;
                     pred.next = node;
-                    //System.out.println("addToMainList:" +Thread.currentThread().getId() + " - localNode.get()" + localNode.get() + " key " + node.key + " node.next " + node.next);
-                    //System.out.println("addToMainList:" +Thread.currentThread().getId() + " pred = " + pred + " curr = " + curr);
                     return true;
                 }
 //            } finally {
-//                //System.out.println("addToMainList:" +Thread.currentThread().getId() + " Exit lock");
 //                lock.unlock();
 //
 //            }
@@ -71,14 +66,12 @@ public class LockFreeBag<T extends Number> {
         tail  = new Node(Integer.MAX_VALUE);
         head.next = this.tail;
 
-        //System.out.println("tail = " + tail);
     }
 
 
     public void add(Integer i) {
         if(localNode.get().next  == null){
             addToMainList();
-            //System.out.println("add:"+ Thread.currentThread().getId() + " - localNode.get()" + localNode.get());
         }
 
         LockFreeListForBag<Integer> list = localNode.get().item;
@@ -90,10 +83,8 @@ public class LockFreeBag<T extends Number> {
 
     public void tryRemoveAny() {
 
-        //System.out.println("HIII");
         if(localNode.get().next == null){
             addToMainList();
-            //System.out.println("tryRemove:"+ Thread.currentThread().getId() + " - localNode.get()" + localNode.get());
         }
 
         LockFreeListForBag<Integer> list = localNode.get().item;
@@ -101,22 +92,11 @@ public class LockFreeBag<T extends Number> {
         if(!list.remove()){
 
             Node n = localNode.get().next;
-//            if(n == null){
-//                System.out.println("tryRemove: "+Thread.currentThread().getId() + " - localNode.get()" + localNode.get());
-//                System.out.println("tryRemove: "+Thread.currentThread().getId() + " - n is null");
-//
-//            }
-
-            //System.out.println(localNode.get());
-            //System.out.println("n = "+ n);
-            //System.out.println("tail = "+ tail);
             while(n.key < tail.key){
                 if(n.item.remove()){
                     return;
                 }
                 n = n.next;
-                //System.out.println("n = "+ n);
-                //System.out.println("tail = "+ tail);
             }
 
             // Start from beginning
