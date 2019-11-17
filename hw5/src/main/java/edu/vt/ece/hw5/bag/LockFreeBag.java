@@ -52,7 +52,6 @@ public class LockFreeBag<T extends Number> {
                 }
 //            } finally {
 //                lock.unlock();
-//
 //            }
         }
 
