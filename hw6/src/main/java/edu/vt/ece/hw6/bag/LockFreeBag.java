@@ -142,6 +142,8 @@ public class LockFreeBag<T> {
                     n = n.next;
                 }
 
+            }else{
+                return item;
             }
         }
     }
