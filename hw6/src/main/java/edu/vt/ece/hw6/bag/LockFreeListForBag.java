@@ -84,7 +84,7 @@ public class LockFreeListForBag<T> {
             Node pred = window.pred, curr = window.curr;
             // is the key present?
             if (curr.key == Integer.MAX_VALUE) {
-                continue; // Got the tail. EMPTY!
+                return null; // Got the tail. EMPTY!
             } else {
                 // snip out matching node
                 Node succ = curr.next.getReference();
