@@ -26,6 +26,7 @@ public class LockFreeListForBag<T> {
      * @return true iff element was not there already
      */
     public boolean add(T item) {
+        long id = Thread.currentThread().getId();
         int key = item.hashCode();
         boolean splice;
         while (true) {
@@ -40,6 +41,7 @@ public class LockFreeListForBag<T> {
             Node node = new Node(item);
             node.next = new AtomicMarkableReference(curr, false);
             if (pred.next.compareAndSet(curr, node, false, false)) {
+                System.out.println(String.format("LockFreeListForBag[%s],thread[%d],add item %d",this,id,item ));
                 return true;
             }
             //}
@@ -75,7 +77,7 @@ public class LockFreeListForBag<T> {
     }
 
     public T dequeue() {
-
+        long id = Thread.currentThread().getId();
         boolean snip;
         while (true) {
             int key = head.next.getReference().key; // head's next.
@@ -94,6 +96,7 @@ public class LockFreeListForBag<T> {
                     continue;
                 }
                 pred.next.compareAndSet(curr, succ, false, false);
+                System.out.println(String.format("LockFreeListForBag[%s],thread[%d],remove item %d",this,id,curr.item ));
                 return curr.item;
             }
         }
