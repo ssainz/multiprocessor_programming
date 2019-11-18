@@ -28,6 +28,7 @@ public class BLFQueue<T> implements Queue<T> {
         int position = (ticket % QUEUE_SIZE);
         Item<T> it = queue[position];
         while(it.lastID != turn);
+        System.out.println("enq:AfterWhileLoop");
         it.value = value;
         it.lastID = turn + 1;
     }
@@ -39,6 +40,7 @@ public class BLFQueue<T> implements Queue<T> {
         int position = (ticket % QUEUE_SIZE);
         Item<T> it = queue[position];
         while(it.lastID != turn);
+        System.out.println("deq:AfterWhileLoop");
         T val = it.value;
         it.lastID = turn + 1;
         return val;
