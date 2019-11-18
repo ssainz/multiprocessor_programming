@@ -2,7 +2,7 @@ package edu.vt.ece.hw6.queue;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class BLFQueue<T> implements Queue<T> {
+public class BoundedLockFreeQueue<T> implements Queue<T> {
     private int QUEUE_SIZE = 64;
     private Item<T>[] queue ;
 
@@ -15,7 +15,7 @@ public class BLFQueue<T> implements Queue<T> {
         volatile public int lastID = 0;
     }
 
-    public BLFQueue(int queueSize){
+    public BoundedLockFreeQueue(int queueSize){
         QUEUE_SIZE = queueSize;
         queue = new Item[QUEUE_SIZE];
         for(int i = 0 ; i < QUEUE_SIZE ; i++){

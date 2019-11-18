@@ -25,7 +25,7 @@ public class QueueTest {
                 queue = new UnboundedLockFreeQueue<Integer>();
                 break;
             case "BLFQueue":
-                queue = new BLFQueue<Integer>(threadCount * 3);
+                queue = new BoundedLockFreeQueue<Integer>(threadCount * 3);
                 break;
             case "SLQueue":
                 queue = new SemiLinearizableQueueV1<Integer>(threadCount * 3  , n);
