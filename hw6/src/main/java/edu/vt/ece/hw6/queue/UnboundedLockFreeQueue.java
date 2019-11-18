@@ -18,6 +18,8 @@ public class UnboundedLockFreeQueue<T> implements Queue<T>{
     }
 
     public UnboundedLockFreeQueue(){
+        tail = new AtomicReference<Node>(null);
+        head = new AtomicReference<Node>(null);
         tail.set(new Node(null));
         head.set(tail.get());
     }
