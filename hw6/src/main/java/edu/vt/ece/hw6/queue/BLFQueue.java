@@ -3,7 +3,7 @@ package edu.vt.ece.hw6.queue;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class BLFQueue<T> implements Queue<T> {
-    private final static int QUEUE_SIZE = 64;
+    private int QUEUE_SIZE = 64;
     private final Item<T>[] queue = new Item[QUEUE_SIZE];
 
     private final AtomicInteger writer = new AtomicInteger();
@@ -15,7 +15,7 @@ public class BLFQueue<T> implements Queue<T> {
         volatile public int lastID = 0;
     }
 
-    public BLFQueue(){
+    public BLFQueue(int queueSize){
         for(int i = 0 ; i < QUEUE_SIZE ; i++){
             queue[i] = new Item<T>();
         }
@@ -28,7 +28,7 @@ public class BLFQueue<T> implements Queue<T> {
         int turn = (ticket / QUEUE_SIZE) * 2;
         int position = (ticket % QUEUE_SIZE);
         Item<T> it = queue[position];
-        System.out.println("["+threadID+"]enq:BeforeWhileLoop[turn="+turn+"][position="+position+"]");
+        //System.out.println("["+threadID+"]enq:BeforeWhileLoop[turn="+turn+"][position="+position+"]");
         while(it.lastID != turn);
         //System.out.println("["+threadID+"]enq:AfterWhileLoop[turn="+turn+"][position="+position+"]");
         it.value = value;
@@ -41,7 +41,7 @@ public class BLFQueue<T> implements Queue<T> {
         int turn = ((ticket / QUEUE_SIZE) * 2) + 1;
         int position = (ticket % QUEUE_SIZE);
         Item<T> it = queue[position];
-        System.out.println("["+threadID+"]deq:BeforeWhileLoop[turn="+turn+"][position="+position+"]");
+        //System.out.println("["+threadID+"]deq:BeforeWhileLoop[turn="+turn+"][position="+position+"]");
         while(it.lastID != turn);
         //System.out.println("["+threadID+"]deq:AfterWhileLoop[turn="+turn+"][position="+position+"]");
         T val = it.value;
