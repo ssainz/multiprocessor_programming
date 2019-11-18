@@ -74,6 +74,29 @@ public class LockFreeListForBag<T> {
         }
     }
 
+    public T dequeue() {
+
+        boolean snip;
+        while (true) {
+            int key = head.next.getReference().key; // head's next.
+            // find predecessor and curren entries
+            Window window = find(head, key);
+            Node pred = window.pred, curr = window.curr;
+            // is the key present?
+            if (curr.key == Integer.MAX_VALUE) {
+                continue; // Got the tail. EMPTY!
+            } else {
+                // snip out matching node
+                Node succ = curr.next.getReference();
+                snip = curr.next.attemptMark(succ, true);
+                if (!snip)
+                    continue;
+                pred.next.compareAndSet(curr, succ, false, false);
+                return curr.item;
+            }
+        }
+    }
+
     /**
      * Test whether element is present
      *

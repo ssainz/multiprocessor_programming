@@ -4,7 +4,7 @@ package edu.vt.ece.hw6.bag;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class LockFreeBag<T extends Number> {
+public class LockFreeBag<T> {
     public static final ThreadLocal<Node> localNode = new ThreadLocal<Node>(){
         protected Node initialValue(){
             return new Node();
@@ -33,7 +33,7 @@ public class LockFreeBag<T extends Number> {
         //lock.lock();
         synchronized (this){
             //try {
-                Node pred, curr;
+                Node<T> pred, curr;
                 int key = localNode.get().hashCode();
                 pred = head;
                 curr = pred.next;
@@ -68,13 +68,12 @@ public class LockFreeBag<T extends Number> {
     }
 
 
-    public void add(Integer i) {
+    public void add(T i) {
         if(localNode.get().next  == null){
             addToMainList();
         }
 
-        LockFreeListForBag<Integer> list = localNode.get().item;
-
+        LockFreeListForBag<T> list = localNode.get().item;
 
         list.add(i);
 
@@ -111,15 +110,49 @@ public class LockFreeBag<T extends Number> {
         return;
     }
 
+    public T deque() {
+
+        if(localNode.get().next == null){
+            addToMainList();
+        }
+
+        LockFreeListForBag<T> list = localNode.get().item;
+        while(true) {
+            T item = list.dequeue();
+            if (item == null) {
+
+                Node<T> n = localNode.get().next;
+                while (n.key < tail.key) {
+                    item = n.item.dequeue();
+                    if (item != null) {
+                        return item;
+                    }
+                    n = n.next;
+                }
+
+                // Start from beginning
+                n = head.next;
+                while (n.key < localNode.get().key) {
+                    item = n.item.dequeue();
+                    if (item != null) {
+                        return item;
+                    }
+                    n = n.next;
+                }
+
+            }
+        }
+    }
+
 
     /**
      * list Node
      */
-    static class Node {
+    static class Node<T> {
         /**
          * actual item
          */
-        volatile public LockFreeListForBag<Integer>  item;
+        volatile public LockFreeListForBag<T>  item;
         /**
          * item's hash code
          */
@@ -132,7 +165,7 @@ public class LockFreeBag<T extends Number> {
          * Constructor for usual Node
          */
         Node() {
-            item = new LockFreeListForBag<Integer>();
+            item = new LockFreeListForBag<T>();
             this.item = item;
             this.key = item.hashCode();
         }

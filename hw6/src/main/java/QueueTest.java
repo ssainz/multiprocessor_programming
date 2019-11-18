@@ -1,5 +1,4 @@
 import edu.vt.ece.hw6.queue.*;
-import edu.vt.ece.hw6.set.SetTestThread;
 
 public class QueueTest {
 
@@ -29,7 +28,7 @@ public class QueueTest {
                 queue = new BLFQueue<Integer>(threadCount * 3);
                 break;
             case "SLQueue":
-                queue = new SemiLinearizableQueue<Integer>();
+                queue = new SemiLinearizableQueueV1<Integer>(threadCount * 3  , n);
                 break;
             default:
                 System.exit(1);
