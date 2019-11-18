@@ -23,24 +23,26 @@ public class BLFQueue<T> implements Queue<T> {
 
 
     public void enq(T value){
+        long threadID = Thread.currentThread().getId();
         int ticket = writer.getAndIncrement();
         int turn = (ticket / QUEUE_SIZE) * 2;
         int position = (ticket % QUEUE_SIZE);
         Item<T> it = queue[position];
         while(it.lastID != turn);
-        System.out.println("enq:AfterWhileLoop");
+        System.out.println("["+threadID+"]enq:AfterWhileLoop");
         it.value = value;
         it.lastID = turn + 1;
     }
 
     public T deq(){
+        long threadID = Thread.currentThread().getId();
         int ticket = reader.getAndIncrement();
         int turn = ((ticket / QUEUE_SIZE) * 2) - 1;
         turn = (turn ==  -1) ? 1: turn;
         int position = (ticket % QUEUE_SIZE);
         Item<T> it = queue[position];
         while(it.lastID != turn);
-        System.out.println("deq:AfterWhileLoop");
+        System.out.println("["+threadID+"]deq:AfterWhileLoop");
         T val = it.value;
         it.lastID = turn + 1;
         return val;
