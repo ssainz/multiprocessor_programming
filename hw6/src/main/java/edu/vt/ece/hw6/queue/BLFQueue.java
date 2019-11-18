@@ -38,8 +38,7 @@ public class BLFQueue<T> implements Queue<T> {
     public T deq(){
         long threadID = Thread.currentThread().getId();
         int ticket = reader.getAndIncrement();
-        int turn = ((ticket / QUEUE_SIZE) * 2) - 1;
-        turn = (turn ==  -1) ? 1: turn;
+        int turn = ((ticket / QUEUE_SIZE) * 2) + 1;
         int position = (ticket % QUEUE_SIZE);
         Item<T> it = queue[position];
         System.out.println("["+threadID+"]deq:BeforeWhileLoop[turn="+turn+"][position="+position+"]");
