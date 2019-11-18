@@ -116,15 +116,14 @@ public class LockFreeBag<T> {
         if(localNode.get().next == null){
             addToMainList();
         }
-
-        LockFreeListForBag<T> list = localNode.get().item;
         while(true) {
+            LockFreeListForBag<T> list = localNode.get().item;
             T item = list.dequeue();
             if (item == null) {
 
                 Node<T> n = localNode.get().next;
                 while (n.key < tail.key) {
-                    System.out.println(String.format("LockFreeBag:%d,%s", id, n));
+                    //System.out.println(String.format("LockFreeBag:%d,%s", id, n));
                     item = n.item.dequeue();
                     if (item != null) {
                         return item;
