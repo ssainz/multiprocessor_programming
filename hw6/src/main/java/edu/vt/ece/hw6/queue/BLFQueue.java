@@ -30,7 +30,7 @@ public class BLFQueue<T> implements Queue<T> {
         Item<T> it = queue[position];
         System.out.println("["+threadID+"]enq:BeforeWhileLoop[turn="+turn+"][position="+position+"]");
         while(it.lastID != turn);
-        System.out.println("["+threadID+"]enq:AfterWhileLoop[turn="+turn+"][position="+position+"]");
+        //System.out.println("["+threadID+"]enq:AfterWhileLoop[turn="+turn+"][position="+position+"]");
         it.value = value;
         it.lastID = turn + 1;
     }
@@ -43,7 +43,7 @@ public class BLFQueue<T> implements Queue<T> {
         Item<T> it = queue[position];
         System.out.println("["+threadID+"]deq:BeforeWhileLoop[turn="+turn+"][position="+position+"]");
         while(it.lastID != turn);
-        System.out.println("["+threadID+"]deq:AfterWhileLoop[turn="+turn+"][position="+position+"]");
+        //System.out.println("["+threadID+"]deq:AfterWhileLoop[turn="+turn+"][position="+position+"]");
         T val = it.value;
         it.lastID = turn + 1;
         return val;
