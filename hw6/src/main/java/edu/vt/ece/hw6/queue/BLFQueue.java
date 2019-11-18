@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class BLFQueue<T> implements Queue<T> {
     private int QUEUE_SIZE = 64;
-    private final Item<T>[] queue = new Item[QUEUE_SIZE];
+    private Item<T>[] queue ;
 
     private final AtomicInteger writer = new AtomicInteger();
     private final AtomicInteger reader = new AtomicInteger();
@@ -17,6 +17,7 @@ public class BLFQueue<T> implements Queue<T> {
 
     public BLFQueue(int queueSize){
         QUEUE_SIZE = queueSize;
+        queue = new Item[QUEUE_SIZE];
         for(int i = 0 ; i < QUEUE_SIZE ; i++){
             queue[i] = new Item<T>();
         }
