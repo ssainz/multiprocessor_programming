@@ -49,7 +49,7 @@ public class SemiLinearizableQueueV1<T> implements Queue<T> {
         int ticket = fineGrainedTicket / n;
         int position = (ticket % QUEUE_SIZE);
         Item<T> it = queue[position];
-        System.out.println("["+threadID+"]deq:BeforeWhileLoop[position="+position+"]");
+        System.out.println("["+threadID+"]deq:BeforeRemovingFromBag[position="+position+"]");
         T val = it.bag.deque();
         return val;
     }

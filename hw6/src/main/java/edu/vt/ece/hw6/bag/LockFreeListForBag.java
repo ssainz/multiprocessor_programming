@@ -89,8 +89,10 @@ public class LockFreeListForBag<T> {
                 // snip out matching node
                 Node succ = curr.next.getReference();
                 snip = curr.next.attemptMark(succ, true);
-                if (!snip)
+                if (!snip) {
+                    System.out.println("snip");
                     continue;
+                }
                 pred.next.compareAndSet(curr, succ, false, false);
                 return curr.item;
             }
