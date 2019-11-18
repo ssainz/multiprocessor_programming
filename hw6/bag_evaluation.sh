@@ -1,1 +1,0 @@
-java -cp build/libs/hw5.jar edu.vt.ece.hw5.bag.Benchmark  64000
