@@ -16,6 +16,7 @@ public class BLFQueue<T> implements Queue<T> {
     }
 
     public BLFQueue(int queueSize){
+        QUEUE_SIZE = queueSize;
         for(int i = 0 ; i < QUEUE_SIZE ; i++){
             queue[i] = new Item<T>();
         }

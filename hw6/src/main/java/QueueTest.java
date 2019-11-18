@@ -17,12 +17,6 @@ public class QueueTest {
             n = Integer.parseInt(args[3]);
         }
 
-        final String listType = args[1];
-        //
-        int[] threadsNumber = {4,9,14,19,20,24,29,35,40};
-        double[] pctg = {.2,.4,.6,.8};
-        //
-
         Queue<Integer> queue = null;
         switch (queueType){
             case "JLQueue":
@@ -32,7 +26,7 @@ public class QueueTest {
                 queue = new UnboundedLockFreeQueue<Integer>();
                 break;
             case "BLFQueue":
-                queue = new BLFQueue<Integer>();
+                queue = new BLFQueue<Integer>(threadCount * 3);
                 break;
             case "SLQueue":
                 queue = new SemiLinearizableQueue<Integer>();
