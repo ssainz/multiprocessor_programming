@@ -124,7 +124,7 @@ public class LockFreeBag<T> {
 
                 Node<T> n = localNode.get().next;
                 while (n.key < tail.key) {
-                    System.out.println(String.format("LockFreeBag:%d,$s", id, n));
+                    System.out.println(String.format("LockFreeBag:%d,%s", id, n));
                     item = n.item.dequeue();
                     if (item != null) {
                         return item;
