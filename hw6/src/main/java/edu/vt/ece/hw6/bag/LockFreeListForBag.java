@@ -41,7 +41,7 @@ public class LockFreeListForBag<T> {
             Node node = new Node(item);
             node.next = new AtomicMarkableReference(curr, false);
             if (pred.next.compareAndSet(curr, node, false, false)) {
-                System.out.println(String.format("LockFreeListForBag[%s],thread[%d],add item %d",this,id,item ));
+                //System.out.println(String.format("LockFreeListForBag[%s],thread[%d],add item %d",this,id,item ));
                 return true;
             }
             //}
@@ -96,7 +96,7 @@ public class LockFreeListForBag<T> {
                     continue;
                 }
                 pred.next.compareAndSet(curr, succ, false, false);
-                System.out.println(String.format("LockFreeListForBag[%s],thread[%d],remove item %d",this,id,curr.item ));
+                //System.out.println(String.format("LockFreeListForBag[%s],thread[%d],remove item %d",this,id,curr.item ));
                 return curr.item;
             }
         }

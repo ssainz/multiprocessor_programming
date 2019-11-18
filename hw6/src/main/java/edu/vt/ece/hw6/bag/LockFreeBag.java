@@ -48,7 +48,7 @@ public class LockFreeBag<T> {
                     Node node = localNode.get();
                     node.next = curr;
                     pred.next = node;
-                    System.out.println(String.format("addToMainList[Bag:%s] Thread=%d,adds its localNode %s", this, id, node));
+                    //System.out.println(String.format("addToMainList[Bag:%s] Thread=%d,adds its localNode %s", this, id, node));
                     return true;
                 }
 //            } finally {
