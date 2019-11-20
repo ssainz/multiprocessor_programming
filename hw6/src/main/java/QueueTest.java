@@ -82,7 +82,7 @@ public class QueueTest {
         }
         double avgThroughput = totalThroughput / 5;
         double avgTime = totalTimeOverall / 5;
-        Dao.storeQueueInDB(queueType,threadCount, avgThroughput, n);
+        //Dao.storeQueueInDB(queueType,threadCount, avgThroughput, n);
         System.out.println(String.format("%d %d %d", numberOfEnq, numberOfDeqSuccess, numberOfEnq - numberOfDeqSuccess));
         System.out.println(String.format("%f", avgThroughput));
     }
