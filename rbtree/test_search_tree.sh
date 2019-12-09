@@ -9,17 +9,6 @@ java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTCoarseGrained 35 640000
 java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTCoarseGrained 40 640000
 java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTCoarseGrained 45 640000
 java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTCoarseGrained 64 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 4 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 8 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 10 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 15 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 20 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 25 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 30 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 35 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 40 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 45 640000
-java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTLockFree 64 640000
 java -javaagent:libs/deuceAgent-1.3.0.jar -cp build/libs/rbtree.jar RedBlackTreeTest RBTCompositional 4 640000
 java -javaagent:libs/deuceAgent-1.3.0.jar -cp build/libs/rbtree.jar RedBlackTreeTest RBTCompositional 8 640000
 java -javaagent:libs/deuceAgent-1.3.0.jar -cp build/libs/rbtree.jar RedBlackTreeTest RBTCompositional 10 640000

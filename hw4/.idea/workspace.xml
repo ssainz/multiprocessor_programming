@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13155291-a26d-4ff8-98d2-e1faa2f16e37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/build/libs/rbtree.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/build/libs/rbtree.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/test_search_tree.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/test_search_tree.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
