@@ -18,7 +18,7 @@ public class Dao {
         }
 
         try (Connection conn = DriverManager.getConnection(
-                "jdbc:postgresql://hw6.ctbqkxvip5yo.us-east-1.rds.amazonaws.com:5432/postgres", "postgres", "rushrush")) {
+                "jdbc:postgresql://multiprocessor.ctbqkxvip5yo.us-east-1.rds.amazonaws.com:5432/postgres", "postgres", "rushrush")) {
 
             if (conn != null) {
                 System.out.println("Connected to the database!");
@@ -28,13 +28,15 @@ public class Dao {
 
             Statement stmt = conn.createStatement();
             String stmtStr = String.format("INSERT INTO results (method,numThreads,numGet,numPut,numDelete,avgGetTime," +
-                    "avgPutTime,avgDeleteTime,avgThroughput,load) VALUES ('%s',%d,%d,%d,%d,%f,%f,%f,%f,%d);", method, numberThreads,
+                    "avgPutTime,avgDeleteTime,avgThroughput,load, times) VALUES ('%s',%d,%d,%d,%d,%f,%f,%f,%f,%d, now());", method, numberThreads,
                     numGet,numPut,numDelete,
                     avgGetTime,avgPutTime,avgDeleteTime,
                     avgThroughput, load);
-            stmt.executeUpdate(stmtStr);
             //System.out.println(stmtStr);
+            stmt.executeUpdate(stmtStr);
+
             /*
+            drop table results;
             CREATE TABLE RESULTS (
             method varchar(50),
             numThreads INTEGER,
@@ -45,7 +47,8 @@ public class Dao {
             avgPutTime REAL,
             avgDeleteTime REAL,
             avgThroughput REAL,
-            load INTEGER
+            load INTEGER,
+            times TIMESTAMP
             );
              */
 

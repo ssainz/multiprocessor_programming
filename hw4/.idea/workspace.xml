@@ -2,95 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13155291-a26d-4ff8-98d2-e1faa2f16e37" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../hw6/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hw6/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hw6/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hw6/.idea/libraries/Gradle__org_postgresql_postgresql_9_3_1100_jdbc4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hw6/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hw6/.idea/modules/hw6.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hw6/.idea/modules/hw6.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../hw6/hw6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/BuildBenchmarkCommands.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeVolatile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/ThreadID.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombineWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v2/RedBlackTreeFlatCombineWorkerv2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v2/RedBlackTreeFlatCombinev2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/Backoff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/BackoffFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/FixedBackoff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/RedBlackTreeFlatCombineWorkerv3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/RedBlackTreeFlatCombinev3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombineWorkerv4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombinev4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/gui/DrawTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/gui/TreeGUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFreeKim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeNodeLockFreeKim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/EmptyException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/CompositionalRBTreeIntSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/TransactionalRBTreeSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw6/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw6/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw6/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw6/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw6/.idea/sbt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw6/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/sbt.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/build/libs/rbtree.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/build/libs/rbtree.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/QueueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/Benchmark.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/LockFreeBag.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/LockFreeList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/LockFreeListForBag.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/TestThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/BoundedLockFreeQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/BoundedLockFreeQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/ConcurrentLinkedQueueWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/EmptyException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/Queue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/QueueTestThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/SemiLinearizableQueueV1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/UnboundedLockFreeQueue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/Benchmark.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/CoarseList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/ConcurrentSet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/Dao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/FineList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/LazyList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/LockFreeList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/OptimisticList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/SetTestThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeCoarseGrained.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeCoarseGrained.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeLockFree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeLockFreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/test_search_tree.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/test_search_tree.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />

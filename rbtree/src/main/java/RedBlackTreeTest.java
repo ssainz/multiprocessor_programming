@@ -106,7 +106,7 @@ public class RedBlackTreeTest {
         avgPutMilliTime = avgPutMilliTime / 5;
         avgDeleteMilliTime = avgDeleteMilliTime / 5;
 
-        //Dao.storeQueueInDB(queueType,threadCount, avgThroughput, n);
+        Dao.storeInDB(treeType,threadCount, (int) numberOfGet, (int) numberOfPut, (int) numberOfDelete, avgGetMilliTime, avgPutMilliTime, avgDeleteMilliTime, avgThroughput, iters);
         System.out.println(String.format("put:[%d],get:[%d],delete:[%d]", numberOfPut, numberOfGet, numberOfDelete));
         System.out.println(String.format("put milli:[%f],get milli:[%f],delete mill:[%f]", avgPutMilliTime, avgGetMilliTime, avgDeleteMilliTime));
         System.out.println(String.format("%f", avgThroughput));
