@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aaf96a69-8bd4-4892-9576-bb4772c1262f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/libraries/Gradle__org_postgresql_postgresql_9_3_1100_jdbc4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/modules/hw6.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/modules/hw6.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/hw6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeVolatile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/ThreadID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombineWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v2/RedBlackTreeFlatCombineWorkerv2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v2/RedBlackTreeFlatCombinev2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/Backoff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/BackoffFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/FixedBackoff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/RedBlackTreeFlatCombineWorkerv3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/RedBlackTreeFlatCombinev3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombineWorkerv4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombinev4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/gui/DrawTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/gui/TreeGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFreeKim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeNodeLockFreeKim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/EmptyException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/CompositionalRBTreeIntSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/TransactionalRBTreeSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/sbt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/rbtree.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/rbtree.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/QueueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/bag/Benchmark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/bag/LockFreeBag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/bag/LockFreeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/bag/LockFreeListForBag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/bag/TestThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/bag/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/queue/BoundedLockFreeQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/BoundedLockFreeQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/queue/ConcurrentLinkedQueueWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/queue/EmptyException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/queue/Queue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/queue/QueueTestThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/queue/SemiLinearizableQueueV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/queue/UnboundedLockFreeQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/Benchmark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/CoarseList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/ConcurrentSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/FineList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/LazyList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/LockFreeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/OptimisticList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/SetTestThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeCoarseGrained.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeCoarseGrained.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeLockFree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeLockFreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_search_tree.sh" beforeDir="false" afterPath="$PROJECT_DIR$/test_search_tree.sh" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#8143#8144#0" expanded="true" />
+                <element signature="e#9091#9092#0" expanded="true" />
+                <element signature="e#9126#9127#0" expanded="true" />
+                <element signature="e#9200#9201#0" expanded="true" />
+                <element signature="e#9236#9237#0" expanded="true" />
+                <element signature="e#9292#9293#0" expanded="true" />
+                <element signature="e#9328#9329#0" expanded="true" />
+                <element signature="e#9377#9378#0" expanded="true" />
+                <element signature="e#9411#9412#0" expanded="true" />
+                <element signature="e#9464#9465#0" expanded="true" />
+                <element signature="e#9500#9501#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_search_tree.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-618">
+              <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Dao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stack_trace.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/RedBlackTreeFlatCombinev3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v2/RedBlackTreeFlatCombinev2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2576">
+              <caret line="181" column="22" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-237">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombineWorker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="473">
+              <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>puts</find>
+      <find>waitingMonitors</find>
+      <find>end</find>
+      <find>RedBlackTreeNonThreadSafe.OperationType</find>
+      <find>RedBlackTreeNonThreadSafe.Operation</find>
+      <find>node.left</find>
+      <find>node.right</find>
+      <find>size()</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>OperationType</replace>
+      <replace>Operation</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNodeLockFreeKim.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/contention/benchmark/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeFlatCombine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/BoundLockFreeQueue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/EmptyException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/ThreadID.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeLockFree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeLockFreeKim.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/BoundedLockFreeQueue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/Queue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/RedBlackTreeFlatCombineWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/RedBlackTreeFlatCombine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/BackoffFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/Backoff.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/FixedBackoff.java" />
+        <option value="$PROJECT_DIR$/test_search_tree.sh" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombineWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v2/RedBlackTreeFlatCombineWorkerv2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/RedBlackTreeFlatCombineWorkerv3.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/gui/TreeGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/Node.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeCoarseGrained.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/gui/DrawTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/CompositionalRBTreeIntSet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/TransactionalRBTreeSet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFreeKim.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/RedBlackTreeFlatCombinev3.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v2/RedBlackTreeFlatCombinev2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeVolatile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombinev4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombineWorkerv4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Dao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/rbtree.iml" />
+        <option value="$PROJECT_DIR$/.idea/modules/rbtree.test.iml" />
+        <option value="$PROJECT_DIR$/.idea/modules/rbtree.main.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/gradle.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_12.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/Gradle__org_postgresql_postgresql_9_3_1100_jdbc4.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/deuceAgent_1_3_0.xml" />
+        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="20" />
+    <option name="y" value="52" />
+    <option name="width" value="1400" />
+    <option name="height" value="769" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="rbtree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rbtree" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="rbtree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rbtree" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rbtree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rbtree" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rbtree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rbtree" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="rbtree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rbtree" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rbtree" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aaf96a69-8bd4-4892-9576-bb4772c1262f" name="Default Changelist" comment="" />
+      <created>1575688251674</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575688251674</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="20" y="52" width="1400" height="769" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533137" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.04587156" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32874617" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32874617" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/QueueTest.java" />
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbtree.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/deuceAgent-1.3.0.jar!/org/deuce/Atomic.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/contention/abstractions/CompositionalMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/contention/abstractions/CompositionalIntSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/contention/benchmark/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="274" column="55" selection-start-line="274" selection-start-column="55" selection-end-line="274" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/EmptyException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeNodeLockFreeKim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/BoundedLockFreeQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/BackoffFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/Backoff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/FixedBackoff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/RedBlackTreeFlatCombineWorkerv3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/ThreadID.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="19" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/src.zip!/java/awt/Graphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="199" column="25" selection-start-line="199" selection-start-column="25" selection-end-line="199" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home/src.zip!/javax/swing/JComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="4323" column="15" selection-start-line="4323" selection-start-column="15" selection-end-line="4323" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/gui/TreeGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/gui/DrawTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="57" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/CompositionalRBTreeIntSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#26545#26546#0" expanded="true" />
+            <element signature="e#26572#26573#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/TransactionalRBTreeSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="e#29661#29662#0" expanded="true" />
+            <element signature="e#29688#29689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="96" column="16" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2716#2717#0" expanded="true" />
+            <element signature="e#2740#2741#0" expanded="true" />
+            <element signature="e#2797#2798#0" expanded="true" />
+            <element signature="e#2824#2825#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/notworking/RedBlackTreeLockFreeKim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1770">
+          <caret line="122" column="18" lean-forward="true" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3823#3824#0" expanded="true" />
+            <element signature="e#3847#3848#0" expanded="true" />
+            <element signature="e#3904#3905#0" expanded="true" />
+            <element signature="e#3931#3932#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v2/RedBlackTreeFlatCombineWorkerv2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeVolatile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="217" lean-forward="true" selection-start-line="217" selection-end-line="217" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7579#7590#0" expanded="true" />
+            <element signature="e#10599#10600#0" expanded="true" />
+            <element signature="e#10632#10633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeCoarseGrained.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="170" column="11" lean-forward="true" selection-start-line="170" selection-start-column="11" selection-end-line="170" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7333#7334#0" expanded="true" />
+            <element signature="e#7368#7369#0" expanded="true" />
+            <element signature="e#7442#7443#0" expanded="true" />
+            <element signature="e#7478#7479#0" expanded="true" />
+            <element signature="e#7619#7620#0" expanded="true" />
+            <element signature="e#7653#7654#0" expanded="true" />
+            <element signature="e#7706#7707#0" expanded="true" />
+            <element signature="e#7742#7743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombinev4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="e#3894#3895#0" expanded="true" />
+            <element signature="e#3943#3944#0" expanded="true" />
+            <element signature="e#5173#5174#0" expanded="true" />
+            <element signature="e#5197#5198#0" expanded="true" />
+            <element signature="e#5302#5303#0" expanded="true" />
+            <element signature="e#5329#5330#0" expanded="true" />
+            <element signature="e#5240#5241#0" expanded="true" />
+            <element signature="e#5285#5286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombineWorkerv4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="33" column="67" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8143#8144#0" expanded="true" />
+            <element signature="e#9091#9092#0" expanded="true" />
+            <element signature="e#9126#9127#0" expanded="true" />
+            <element signature="e#9200#9201#0" expanded="true" />
+            <element signature="e#9236#9237#0" expanded="true" />
+            <element signature="e#9292#9293#0" expanded="true" />
+            <element signature="e#9328#9329#0" expanded="true" />
+            <element signature="e#9377#9378#0" expanded="true" />
+            <element signature="e#9411#9412#0" expanded="true" />
+            <element signature="e#9464#9465#0" expanded="true" />
+            <element signature="e#9500#9501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/RedBlackTreeFlatCombinev3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v2/RedBlackTreeFlatCombinev2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2576">
+          <caret line="181" column="22" selection-start-line="181" selection-start-column="22" selection-end-line="181" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v1/RedBlackTreeFlatCombineWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stack_trace.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-618">
+          <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_search_tree.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8_221</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>main|rbtree</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>deuceAgent-1.3.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

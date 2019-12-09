@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/rbtree.iml" filepath="$PROJECT_DIR$/rbtree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rbtree.main.iml" filepath="$PROJECT_DIR$/.idea/modules/rbtree.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rbtree.test.iml" filepath="$PROJECT_DIR$/.idea/modules/rbtree.test.iml" />
+    </modules>
+  </component>
+</project>

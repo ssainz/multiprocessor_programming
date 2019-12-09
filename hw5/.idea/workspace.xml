@@ -2,9 +2,73 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ce8da59-f1ac-450c-afce-b301a6073fe9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/libraries/Gradle__junit_junit_4_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/libraries/Gradle__org_postgresql_postgresql_9_3_1100_jdbc4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/modules/hw6.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/.idea/modules/hw6.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../hw6/hw6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeLockFreeKim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNodeLockFreeKim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/CompositionalRBTreeIntSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/synchrobench/TransactionalRBTreeSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hw5_ssainz_partII.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/hw5_ssainz_partII.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/sbt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw6/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/sbt.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/build/libs/rbtree.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/build/libs/rbtree.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/QueueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/Benchmark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/LockFreeBag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/LockFreeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/LockFreeListForBag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/TestThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/bag/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/BoundedLockFreeQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/ConcurrentLinkedQueueWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/EmptyException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/Queue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/QueueTestThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/SemiLinearizableQueueV1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/queue/UnboundedLockFreeQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/Benchmark.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/CoarseList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/ConcurrentSet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/FineList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/LazyList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/LockFreeList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/OptimisticList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/hw6/set/SetTestThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeCoarseGrained.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeCoarseGrained.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeLockFree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeLockFree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/test_search_tree.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/test_search_tree.sh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,11 +87,11 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
+            <state relative-caret-position="1425">
               <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -39,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Dao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
+            <state relative-caret-position="1260">
               <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
             </state>
           </provider>
@@ -66,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Benchmark.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1059">
+            <state relative-caret-position="1335">
               <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
             </state>
           </provider>
@@ -75,12 +139,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-480">
+            <state relative-caret-position="720">
               <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#219#329#0" expanded="true" />
-                <element signature="e#328#329#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,8 +151,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeListForBag.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-968">
-              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="135">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -107,7 +169,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/TestThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-220">
+            <state relative-caret-position="60">
               <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
@@ -116,7 +178,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
+            <state relative-caret-position="150">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
@@ -154,6 +216,12 @@
       </list>
     </option>
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="20" />
+    <option name="y" value="52" />
+    <option name="width" value="1400" />
+    <option name="height" value="769" />
+  </component>
   <component name="ProjectId" id="1TLYlvhcx5AYzZkcMO9hkI1eRdu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -161,7 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,36 +268,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hw5" type="462c0819:PsiDirectoryNode" />
-              <item name="bag" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hw5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="hw5" type="462c0819:PsiDirectoryNode" />
-              <item name="set" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hw5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="lists" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hw5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hw5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -293,21 +337,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="64" width="1400" height="769" extended-state="0" />
-    <editor active="true" />
+    <frame x="20" y="52" width="1400" height="769" extended-state="0" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496318" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26067746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Build" weight="0.32874617" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32874617" />
@@ -315,15 +353,20 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Gradle" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.32874617" />
+      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -416,20 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home/src.zip!/java/util/concurrent/atomic/AtomicMarkableReference.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -437,10 +466,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/TestThread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="1425">
+          <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -458,46 +497,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/Benchmark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="97" column="14" selection-start-line="97" selection-start-column="14" selection-end-line="97" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/set/Benchmark.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1059">
+        <state relative-caret-position="1335">
           <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeBag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
+        <state relative-caret-position="720">
           <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#219#329#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/TestThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw5/bag/LockFreeListForBag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-968">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="135">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>

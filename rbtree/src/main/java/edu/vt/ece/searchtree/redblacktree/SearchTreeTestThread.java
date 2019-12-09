@@ -1,5 +1,7 @@
 package edu.vt.ece.searchtree.redblacktree;
 
+import edu.vt.ece.searchtree.redblacktree.flatcombine.ThreadID;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class SearchTreeTestThread extends Thread{
@@ -10,6 +12,10 @@ public class SearchTreeTestThread extends Thread{
     public long putTimes;
     public long getTimes;
     public long deleteTimes;
+
+    public long getMilli;
+    public long putMilli;
+    public long deleteMilli;
 
     private int iter;
 
@@ -27,6 +33,7 @@ public class SearchTreeTestThread extends Thread{
 
         boolean isEnq = true;
         for (int i = 0; i < iter; i++) {
+            long startOp = System.nanoTime();
             int rand = random.nextInt(100);
 
             int operation = random.nextInt(100);
@@ -34,14 +41,19 @@ public class SearchTreeTestThread extends Thread{
             if(operation >= 20){
                 tree.get(rand);
                 getTimes++;
+                getMilli += (System.nanoTime() - startOp);
             }else if(operation >= 10){
-                tree.put(rand,rand);
+                tree.putV2(rand,rand);
                 putTimes++;
+                putMilli += (System.nanoTime() - startOp);
             }else{
-                //tree.delete(rand);
-                //deleteTimes++;
+                tree.delete(rand);
+                deleteTimes++;
+                deleteMilli += (System.nanoTime()- startOp);
             }
+            //System.out.println(String.format("Thread[%s] finish iter[%d] ", ThreadID.get(), i));
         }
+        //System.out.println(String.format("Thread[%s] FINISH ALL ", ThreadID.get()));
         elapsed = System.currentTimeMillis() - start;
     }
 

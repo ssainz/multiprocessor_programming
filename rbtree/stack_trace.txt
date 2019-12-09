@@ -1,0 +1,143 @@
+2019-12-08 17:10:00
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (25.221-b11 mixed mode):
+
+"Attach Listener" #15 daemon prio=9 os_prio=31 tid=0x00007fdbeb86a800 nid=0xc07 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-4" #14 prio=5 os_prio=31 tid=0x00007fdbeb8ab800 nid=0xa603 runnable [0x0000700004076000]
+   java.lang.Thread.State: RUNNABLE
+	at edu.vt.ece.searchtree.redblacktree.flatcombine.v4.RedBlackTreeFlatCombinev4.get(RedBlackTreeFlatCombinev4.java:134)
+	at edu.vt.ece.searchtree.redblacktree.SearchTreeTestThread.run(SearchTreeTestThread.java:42)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-3" #13 prio=5 os_prio=31 tid=0x00007fdbeb8ab000 nid=0xa803 runnable [0x0000700003f73000]
+   java.lang.Thread.State: RUNNABLE
+	at edu.vt.ece.searchtree.redblacktree.flatcombine.v4.RedBlackTreeFlatCombinev4.putV2(RedBlackTreeFlatCombinev4.java:112)
+	at edu.vt.ece.searchtree.redblacktree.SearchTreeTestThread.run(SearchTreeTestThread.java:46)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-2" #12 prio=5 os_prio=31 tid=0x00007fdbeb8aa000 nid=0x5803 runnable [0x0000700003e70000]
+   java.lang.Thread.State: RUNNABLE
+	at edu.vt.ece.searchtree.redblacktree.flatcombine.v4.RedBlackTreeFlatCombinev4.get(RedBlackTreeFlatCombinev4.java:134)
+	at edu.vt.ece.searchtree.redblacktree.SearchTreeTestThread.run(SearchTreeTestThread.java:42)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-1" #11 prio=5 os_prio=31 tid=0x00007fdbeb895000 nid=0x5703 runnable [0x0000700003d6d000]
+   java.lang.Thread.State: RUNNABLE
+	at edu.vt.ece.searchtree.redblacktree.flatcombine.v4.RedBlackTreeFlatCombinev4.get(RedBlackTreeFlatCombinev4.java:134)
+	at edu.vt.ece.searchtree.redblacktree.SearchTreeTestThread.run(SearchTreeTestThread.java:42)
+
+   Locked ownable synchronizers:
+	- None
+
+"Thread-0" #10 prio=5 os_prio=31 tid=0x00007fdbeb8a9800 nid=0x5503 runnable [0x0000700003c6a000]
+   java.lang.Thread.State: RUNNABLE
+	at edu.vt.ece.searchtree.redblacktree.RedBlackTreeVolatile.size(RedBlackTreeVolatile.java:360)
+	at edu.vt.ece.searchtree.redblacktree.flatcombine.v4.RedBlackTreeFlatCombineWorkerv4.run(RedBlackTreeFlatCombineWorkerv4.java:48)
+
+   Locked ownable synchronizers:
+	- None
+
+"Service Thread" #9 daemon prio=9 os_prio=31 tid=0x00007fdbea889800 nid=0x3d03 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C1 CompilerThread3" #8 daemon prio=9 os_prio=31 tid=0x00007fdbea877000 nid=0x3803 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread2" #7 daemon prio=9 os_prio=31 tid=0x00007fdbea86e000 nid=0x3e03 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread1" #6 daemon prio=9 os_prio=31 tid=0x00007fdbea86d800 nid=0x3603 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" #5 daemon prio=9 os_prio=31 tid=0x00007fdbea86c000 nid=0x3503 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=31 tid=0x00007fdbea85d000 nid=0x4203 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" #3 daemon prio=8 os_prio=31 tid=0x00007fdbea840800 nid=0x3203 in Object.wait() [0x0000700003452000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x000000076ab08ed8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x000000076ab08ed8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:216)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" #2 daemon prio=10 os_prio=31 tid=0x00007fdbea83e000 nid=0x3003 in Object.wait() [0x000070000334f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x000000076ab06c00> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x000000076ab06c00> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+   Locked ownable synchronizers:
+	- None
+
+"main" #1 prio=5 os_prio=31 tid=0x00007fdbeb800000 nid=0x2703 in Object.wait() [0x0000700002931000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x000000076abb4fe8> (a edu.vt.ece.searchtree.redblacktree.SearchTreeTestThread)
+	at java.lang.Thread.join(Thread.java:1252)
+	- locked <0x000000076abb4fe8> (a edu.vt.ece.searchtree.redblacktree.SearchTreeTestThread)
+	at java.lang.Thread.join(Thread.java:1326)
+	at RedBlackTreeTest.main(RedBlackTreeTest.java:68)
+
+   Locked ownable synchronizers:
+	- None
+
+"VM Thread" os_prio=31 tid=0x00007fdbea837800 nid=0x4c03 runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=31 tid=0x00007fdbea80e000 nid=0x2107 runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=31 tid=0x00007fdbea80e800 nid=0x2a03 runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=31 tid=0x00007fdbeb80a000 nid=0x2c03 runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=31 tid=0x00007fdbeb80a800 nid=0x5303 runnable 
+
+"GC task thread#4 (ParallelGC)" os_prio=31 tid=0x00007fdbea80f000 nid=0x5103 runnable 
+
+"GC task thread#5 (ParallelGC)" os_prio=31 tid=0x00007fdbea80f800 nid=0x2d03 runnable 
+
+"GC task thread#6 (ParallelGC)" os_prio=31 tid=0x00007fdbea810800 nid=0x2e03 runnable 
+
+"GC task thread#7 (ParallelGC)" os_prio=31 tid=0x00007fdbeb80b000 nid=0x4d03 runnable 
+
+"VM Periodic Task Thread" os_prio=31 tid=0x00007fdbeb872800 nid=0x3b03 waiting on condition 
+
+JNI global references: 5
+

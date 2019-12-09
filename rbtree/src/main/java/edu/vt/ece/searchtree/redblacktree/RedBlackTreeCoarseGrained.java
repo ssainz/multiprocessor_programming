@@ -1,5 +1,6 @@
 package edu.vt.ece.searchtree.redblacktree;
 
+import java.util.Stack;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -10,20 +11,9 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
 
     private ReentrantLock lock = new ReentrantLock();
 
-    Node root;
+    Node<Key, Value> root;
 
-    class Node{
-        Key key;
-        Value value;
-        Node left, right;
-        boolean color;
 
-        public Node(Key key, Value val, boolean color){
-            this.key = key;
-            this.value = val;
-            this.color = color;
-        }
-    }
 
     public RedBlackTreeCoarseGrained() {
     }
@@ -37,7 +27,7 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
         return node.color == RED;
     }
 
-    public boolean put(Key key, Value val){
+    public boolean putV2(Key key, Value val){
 
         lock.lock();
 
@@ -52,9 +42,9 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
         return true;
     }
 
-    private Node put(Node node, Key key, Value val) {
+    private Node put(Node<Key, Value> node, Key key, Value val) {
 
-        if(node == null) return new Node(key, val, RED);
+        if(node == null) return new Node<Key, Value>(key, val, RED);
 
         int comparison = key.compareTo(node.key);
         if (comparison < 0)         node.left = put(node.left, key, val);
@@ -108,7 +98,7 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
         return val;
     }
 
-    private Value get(Node node, Key key) {
+    private Value get(Node<Key, Value> node, Key key) {
         while(node != null){
             int comparison = key.compareTo(node.key);
             if (comparison < 0)         node = node.left;
@@ -141,7 +131,12 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
         return true;
     }
 
-    private Node delete(Node node, Key key) {
+    @Override
+    public void end() {
+
+    }
+
+    private Node delete(Node<Key, Value> node, Key key) {
 
         if(key.compareTo(node.key) < 0){
             if(!isRed(node.left) && node.left != null && !isRed(node.left.left)){
@@ -159,7 +154,7 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
                 node = moveRedRight(node);
             }
             if(key.compareTo(node.key) == 0 ){
-                Node x = min(node.right);
+                Node<Key, Value> x = min(node.right);
                 node.key = x.key;
                 node.value = x.value;
                 node.right = deleteMin(node.right);
@@ -171,7 +166,7 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
         return balance(node);
     }
 
-    private Node moveRedLeft(Node node) {
+    private Node<Key, Value> moveRedLeft(Node<Key, Value> node) {
         flipColors(node);
         if(node.right != null && isRed(node.right.left)){
             node.right = rotateRight(node.right);
@@ -181,7 +176,7 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
         return node;
     }
 
-    private Node moveRedRight(Node node) {
+    private Node<Key, Value> moveRedRight(Node<Key, Value> node) {
         flipColors(node);
         if(node.left != null && isRed(node.left.left)){
             node = rotateRight(node);
@@ -195,7 +190,7 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
         return min(root).key;
     }
 
-    private Node min(Node node) {
+    private Node<Key, Value> min(Node<Key, Value> node) {
         if(node.left == null) return node;
         return min(node.left);
     }
@@ -231,6 +226,79 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
         return node;
     }
 
+    public int maxDepth(){
+        Stack<Node> stack = new Stack();
+        this.root.depth = 0;
+
+        stack.push(this.root);
+        int maxDept = 0;
+
+        while(!stack.isEmpty()){
+            Node n = stack.pop();
+            maxDept = n.depth > maxDept? n.depth : maxDept;
+
+            if(n.left != null){
+                n.left.depth = n.depth + 1;
+                stack.push(n.left);
+            }
+            if(n.right != null){
+                n.right.depth = n.depth + 1;
+                stack.push(n.right);
+            }
+        }
+        return maxDept;
+    }
+
+    @Override
+    public Node<Key, Value> getRootV2() {
+        return root;
+    }
+
+
+    public class Node <Key extends Comparable<Key>, Value> implements SearchTreeNode<Key, Value> {
+
+        public volatile Key key;
+        public volatile Value value;
+        public volatile Node left;
+        public volatile Node right;
+        public volatile boolean color;
+        public volatile int depth;
+
+        public Node(Key key, Value val, boolean color){
+            this.key = key;
+            this.value = val;
+            this.color = color;
+        }
+
+        @Override
+        public SearchTreeNode<Key, Value> getLeft() {
+            return left;
+        }
+
+        @Override
+        public SearchTreeNode<Key, Value> getRight() {
+            return right;
+        }
+
+        @Override
+        public  boolean getColor() {
+            return color;
+        }
+
+        @Override
+        public Key getKey() {
+            return key;
+        }
+
+        @Override
+        public Value getValue() {
+            return value;
+        }
+
+
+    }
+
+
 
     public static void main(String[] args){
 
@@ -240,7 +308,7 @@ public class RedBlackTreeCoarseGrained<Key extends Comparable<Key>, Value> imple
         for(int i = 0 ; i < 10 ; i++){
             int nextInsert = random.nextInt(100);
             System.out.println("a "+ nextInsert);
-            tree.put(nextInsert, nextInsert);
+            tree.putV2(nextInsert, nextInsert);
             //tree.put(i, i);
 
         }
