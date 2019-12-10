@@ -1,14 +1,18 @@
-package edu.vt.ece.searchtree.redblacktree;
+package edu.vt.ece.searchtree.redblacktree.flatcombine.v5;
 
+import edu.vt.ece.searchtree.redblacktree.SearchTree;
+import edu.vt.ece.searchtree.redblacktree.SearchTreeNode;
 import edu.vt.ece.searchtree.redblacktree.flatcombine.ThreadID;
 import edu.vt.ece.searchtree.redblacktree.gui.TreeGUI;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class RedBlackTreeNonThreadSafe<Key extends Comparable<Key>, Value> implements SearchTree<Key, Value>{
+public class RBTBatch<Key extends Comparable<Key>, Value> implements SearchTree<Key, Value> {
 
     public static final boolean RED = true;
     public static final boolean BLACK = false;
@@ -39,7 +43,7 @@ public class RedBlackTreeNonThreadSafe<Key extends Comparable<Key>, Value> imple
         DELETE
     }
 
-    public RedBlackTreeNonThreadSafe() {
+    public RBTBatch() {
     }
 
     public boolean isEmpty(){
@@ -120,7 +124,13 @@ public class RedBlackTreeNonThreadSafe<Key extends Comparable<Key>, Value> imple
             int comparison = key.compareTo(node.key);
             if (comparison < 0)         node = node.left;
             else if (comparison > 0)    node = node.right;
-            else                        return node.value;
+            else{
+                if(node.isDeleted){
+                    return null;
+                }else {
+                    return node.value;
+                }
+            }
         }
         return null;
     }
@@ -185,20 +195,6 @@ public class RedBlackTreeNonThreadSafe<Key extends Comparable<Key>, Value> imple
         return balance(node);
     }
 
-    private SearchTree<Key,Value> buildTreeFromOps(ArrayList<Operation> ops) {
-        SearchTree<Key,Value> testTree = new RedBlackTreeCoarseGrained<Key,Value>();
-
-        for(int i = 0 ; i < ops.size() -1 ; i++){ // skip last delete
-            Operation o = ops.get(i);
-            if(o.operationType == OperationType.DELETE){
-                testTree.delete(o.key);
-            }else if(o.operationType == OperationType.PUT){
-                testTree.putV2(o.key, o.value);
-            }
-        }
-        System.out.println("Operation " + ops.get(ops.size() - 1) + " not performed!");
-        return testTree;
-    }
 
     private Node moveRedLeft(Node node) {
         flipColors(node);
@@ -317,6 +313,74 @@ public class RedBlackTreeNonThreadSafe<Key extends Comparable<Key>, Value> imple
         return count;
     }
 
+    /**
+     * Returns null if node does not exists
+     * Or false if exists but is deleted
+     * Or true if exists and is actually in the tree.
+     */
+    Boolean exists(Key key) {
+        if (key == null) return null;
+        return exists(root, key);
+    }
+
+    Boolean exists(Node<Key, Value> node, Key key){
+
+        while(node != null){
+            int comparison = key.compareTo(node.key);
+            if (comparison < 0)         node = node.left;
+            else if (comparison > 0)    node = node.right;
+            else                        return node.isDeleted;
+        }
+        return null;
+    }
+
+    /**
+     * Changes the node specified by key to the value to val
+     */
+    void softPut(Key key, Value val) {
+        if (key == null) return;
+        softPut(root, key, val);
+    }
+
+    void softPut(Node<Key, Value> node, Key key, Value val){
+
+        while(node != null){
+            int comparison = key.compareTo(node.key);
+            if (comparison < 0)         node = node.left;
+            else if (comparison > 0)    node = node.right;
+            else{
+                node.value = val;
+                node.isDeleted = false;
+                return;
+            }
+        }
+        return;
+    }
+
+    /**
+     * Changes the node specified by key to the value to val
+     */
+    void softDelete(Key key) {
+        if (key == null) return;
+        softDelete(root, key);
+    }
+
+    void softDelete(Node<Key, Value> node, Key key){
+
+        while(node != null){
+            int comparison = key.compareTo(node.key);
+            if (comparison < 0)         node = node.left;
+            else if (comparison > 0)    node = node.right;
+            else{
+                node.isDeleted = true;
+                return;
+            }
+        }
+        return;
+    }
+
+
+
     public class Node <Key extends Comparable<Key>, Value> implements SearchTreeNode<Key, Value> {
 
         public volatile Key key;
@@ -325,11 +389,13 @@ public class RedBlackTreeNonThreadSafe<Key extends Comparable<Key>, Value> imple
         public volatile Node right;
         public volatile boolean color;
         public volatile int depth;
+        public volatile boolean isDeleted;
 
         public Node(Key key, Value val, boolean color){
             this.key = key;
             this.value = val;
             this.color = color;
+            this.isDeleted = false;
         }
 
         @Override
@@ -357,14 +423,46 @@ public class RedBlackTreeNonThreadSafe<Key extends Comparable<Key>, Value> imple
             return value;
         }
 
+    }
 
+    public List<Node<Key, Value>> getDeletedNodes() {
+
+        List<Node<Key, Value>> list = new ArrayList<>();
+
+        Stack<Node> stack = new Stack();
+        int count = 0;
+
+        if(this.root == null) return list;
+
+        stack.push(this.root);
+        count ++;
+
+
+
+        while(!stack.isEmpty()){
+            Node<Key, Value> n = stack.pop();
+
+            if(n.isDeleted){
+                list.add(n);
+            }
+
+            if(n.left != null){
+                stack.push(n.left);
+                count++;
+            }
+            if(n.right != null){
+                stack.push(n.right);
+                count++;
+            }
+        }
+        return list;
     }
 
     public static void main(String[] args){
 
         ThreadLocalRandom random = ThreadLocalRandom.current();
 
-        RedBlackTreeNonThreadSafe<Integer, Integer> tree = new RedBlackTreeNonThreadSafe<>();
+        RBTBatch<Integer, Integer> tree = new RBTBatch<>();
         for(int i = 0 ; i < 10 ; i++){
             int nextInsert = random.nextInt(100);
             System.out.println("a "+ nextInsert);

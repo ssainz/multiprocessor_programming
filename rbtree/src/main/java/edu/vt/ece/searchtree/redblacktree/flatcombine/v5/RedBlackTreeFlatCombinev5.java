@@ -1,24 +1,21 @@
-package edu.vt.ece.searchtree.redblacktree.flatcombine.v4;
+package edu.vt.ece.searchtree.redblacktree.flatcombine.v5;
 
-import edu.vt.ece.searchtree.redblacktree.RedBlackTreeNonThreadSafe;
-import edu.vt.ece.searchtree.redblacktree.RedBlackTreeVolatile;
 import edu.vt.ece.searchtree.redblacktree.SearchTree;
 import edu.vt.ece.searchtree.redblacktree.SearchTreeNode;
 import edu.vt.ece.searchtree.redblacktree.flatcombine.ThreadID;
-import edu.vt.ece.searchtree.redblacktree.flatcombine.v4.RedBlackTreeFlatCombineWorkerv4;
-import edu.vt.ece.searchtree.redblacktree.flatcombine.v4.RedBlackTreeFlatCombinev4;
 import edu.vt.ece.searchtree.redblacktree.queue.BoundedLockFreeQueue;
 import edu.vt.ece.searchtree.redblacktree.queue.Queue;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class RedBlackTreeFlatCombinev4 <Key extends Comparable<Key>, Value> implements SearchTree<Key, Value> {
+public class RedBlackTreeFlatCombinev5 <Key extends Comparable<Key>, Value> implements SearchTree<Key, Value> {
 
-    public volatile RedBlackTreeNonThreadSafe<Key, Value> actualTree = new RedBlackTreeNonThreadSafe<>();
+    public int MAX_SIZE = 1000;
+    public volatile RBTBatch<Key, Value> actualTree = new RBTBatch<>();
 
     /**
-     * This v4 all threads are spin wating for combiner
+     * This v3 will not wait for GET threads, BACKOFF wait in DELETE,PUT
      */
 
     public final ThreadLocal<Operator> threadLocalOperation = new ThreadLocal<Operator>() {
@@ -62,6 +59,7 @@ public class RedBlackTreeFlatCombinev4 <Key extends Comparable<Key>, Value> impl
         int pid;
         ThreadStatus status;
         boolean res;
+        boolean softOperation = false;
 
         Operator(OperationType operationType, Key key, Value value, int pid, ThreadStatus status){
             this.operationType = operationType;
@@ -78,15 +76,17 @@ public class RedBlackTreeFlatCombinev4 <Key extends Comparable<Key>, Value> impl
         }
     }
 
-    //public ThreadStatus[] threadStatus ; // Tracks thread status.
+
     public ThreadStatus[] waitingMonitors ; // Thread monitors.
-    AtomicInteger numberOfPendingGet = new AtomicInteger(0); // Tracks whether all get are served.
+    AtomicInteger numberOfPendingOperations = new AtomicInteger(0); // Tracks whether all get are served.
     public Queue<Operator> operationsQueue = null; // Tracks operations.
     int threadNumber = 0;
-    RedBlackTreeFlatCombineWorkerv4 worker = null;
+    RedBlackTreeFlatCombineWorkerv5 worker = null;
     AtomicBoolean timeToFinish = new AtomicBoolean(false);
+    AtomicInteger size = new AtomicInteger(0);
 
-    public RedBlackTreeFlatCombinev4(int threadNumber){
+    public RedBlackTreeFlatCombinev5(int threadNumber, int maxSize){
+        MAX_SIZE = maxSize;
         this.threadNumber = threadNumber;
         //threadStatus = new ThreadStatus[threadNumber];
         waitingMonitors = new ThreadStatus[threadNumber];
@@ -94,7 +94,7 @@ public class RedBlackTreeFlatCombinev4 <Key extends Comparable<Key>, Value> impl
             waitingMonitors[i] = new ThreadStatus();
         }
         this.operationsQueue = new BoundedLockFreeQueue<Operator>(threadNumber * 3);
-        worker = new RedBlackTreeFlatCombineWorkerv4(this);
+        worker = new RedBlackTreeFlatCombineWorkerv5(this);
         worker.start(); // Start worker thread.
     }
     @Override
@@ -112,8 +112,19 @@ public class RedBlackTreeFlatCombinev4 <Key extends Comparable<Key>, Value> impl
 
         while(aboutToSleep.get()); //Spinning
 
+        if(op.softOperation){ // Caller does the job in case the key already exists and this is an update only.
+
+            op.softOperation = false; // Reset for next time.
+            actualTree.softPut(key, val); // Marks node as Not deleted.
+            this.numberOfPendingOperations.decrementAndGet();
+            return true;
+
+        }
+
         return true;
     }
+
+
 
     public boolean putV2_util(Key key, Value val) {
         return actualTree.putV2(key, val);
@@ -136,7 +147,7 @@ public class RedBlackTreeFlatCombinev4 <Key extends Comparable<Key>, Value> impl
 
         Value v = actualTree.get(key);
 
-        int va = numberOfPendingGet.decrementAndGet();
+        int va = numberOfPendingOperations.decrementAndGet();
 
         //System.out.println(String.format("Thread[%s] finish GET numberOfPendingGet = %d", ThreadID.get(), va));
 
@@ -156,6 +167,14 @@ public class RedBlackTreeFlatCombinev4 <Key extends Comparable<Key>, Value> impl
         operationsQueue.enq(op);
 
         while(aboutToSleep.get()); //Spinning
+
+
+        if(op.softOperation){ // Caller does the job in case the key already exists and this is an update only.
+            op.softOperation = false; // Reset for next time.
+            actualTree.softDelete(key);
+            this.numberOfPendingOperations.decrementAndGet();
+            return true;
+        }
 
         return true;
     }

@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e55c95-0235-42c3-9654-081d1f27b44d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RBTBatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombineWorkerv5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombinev5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/test_search_tree.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/test_search_tree.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/BuildBenchmarkCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/BuildBenchmarkCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombinev4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombinev4.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />

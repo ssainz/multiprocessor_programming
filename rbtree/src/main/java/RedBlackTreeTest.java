@@ -2,6 +2,7 @@ import edu.vt.ece.searchtree.redblacktree.RedBlackTreeCoarseGrained;
 import edu.vt.ece.searchtree.redblacktree.flatcombine.v2.RedBlackTreeFlatCombinev2;
 import edu.vt.ece.searchtree.redblacktree.flatcombine.v3.RedBlackTreeFlatCombinev3;
 import edu.vt.ece.searchtree.redblacktree.flatcombine.v4.RedBlackTreeFlatCombinev4;
+import edu.vt.ece.searchtree.redblacktree.flatcombine.v5.RedBlackTreeFlatCombinev5;
 import edu.vt.ece.searchtree.redblacktree.notworking.RedBlackTreeLockFree;
 import edu.vt.ece.searchtree.redblacktree.SearchTree;
 import edu.vt.ece.searchtree.redblacktree.SearchTreeTestThread;
@@ -139,6 +140,9 @@ public class RedBlackTreeTest {
                 break;
             case "RBTFlatCombineV4":
                 tree = new RedBlackTreeFlatCombinev4(threadCount);
+                break;
+            case "RBTFlatCombineV5":
+                tree = new RedBlackTreeFlatCombinev5(threadCount,1000);
                 break;
             default:
                 System.out.println("Unknown tree type " + treeType);
