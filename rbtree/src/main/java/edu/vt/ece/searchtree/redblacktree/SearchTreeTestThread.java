@@ -34,7 +34,7 @@ public class SearchTreeTestThread extends Thread{
         boolean isEnq = true;
         for (int i = 0; i < iter; i++) {
             long startOp = System.nanoTime();
-            int rand = random.nextInt(100);
+            int rand = random.nextInt(2000);
 
             int operation = random.nextInt(100);
 

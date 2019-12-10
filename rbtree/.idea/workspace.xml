@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aaf96a69-8bd4-4892-9576-bb4772c1262f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RBTBatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombineWorkerv5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombinev5.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombinev4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombinev4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_search_tree.sh" beforeDir="false" afterPath="$PROJECT_DIR$/test_search_tree.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -147,10 +139,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="36" column="42" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="182" selection-start-line="8" selection-start-column="182" selection-end-line="8" selection-end-column="182" />
+            <state relative-caret-position="270">
+              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -201,7 +205,6 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/Queue.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/RedBlackTreeFlatCombineWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/RedBlackTreeFlatCombine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/BackoffFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/Backoff.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v3/FixedBackoff.java" />
@@ -232,6 +235,7 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombineWorkerv5.java" />
         <option value="$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" />
       </list>
     </option>
   </component>
@@ -618,16 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="49" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeVolatile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="271">
@@ -808,6 +802,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1332">
@@ -818,10 +819,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="182" selection-start-line="8" selection-start-column="182" selection-end-line="8" selection-end-column="182" />
+        <state relative-caret-position="270">
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
