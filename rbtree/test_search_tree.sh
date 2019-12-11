@@ -1,3 +1,14 @@
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 3 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 7 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 9 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 14 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 19 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 24 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 29 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 34 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 39 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 44 640000
+java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTFlatCombineV6 63 640000
 java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTCoarseGrained 4 640000
 java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTCoarseGrained 8 640000
 java  -cp build/libs/rbtree.jar RedBlackTreeTest RBTCoarseGrained 10 640000

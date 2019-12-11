@@ -6,7 +6,7 @@ public class BuildBenchmarkCommands {
         java -cp build/libs/rbtree.jar BuildBenchmarkCommands > test_search_tree.sh
          */
 
-        String[] methods = {"RBTCoarseGrained","RBTCompositional","RBTTransactional","RBTFlatCombineV5", "RBTFlatCombineV1", "RBTFlatCombineV2", "RBTFlatCombineV4", "RBTFlatCombineV3" };
+        String[] methods = {"RBTFlatCombineV6", "RBTCoarseGrained","RBTCompositional","RBTTransactional","RBTFlatCombineV5", "RBTFlatCombineV1", "RBTFlatCombineV2", "RBTFlatCombineV4", "RBTFlatCombineV3" };
         int[] threads = {4,8,10,15,20,25,30,35,40,45,64};
         int[] load = {640000};
 

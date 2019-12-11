@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aaf96a69-8bd4-4892-9576-bb4772c1262f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw6/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/rbtree.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/rbtree.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombinev5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombinev5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTCombineWorkerv6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTCombineWorkerv6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTFlatCombinev6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTFlatCombinev6.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/BoundedLockFreeQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/BoundedLockFreeQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack_trace.txt" beforeDir="false" afterPath="$PROJECT_DIR$/stack_trace.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -101,18 +86,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombineWorkerv4.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-818">
-              <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/RedBlackTreeTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="412">
@@ -136,7 +109,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTCombineWorkerv6.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2910">
@@ -144,6 +117,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -241,7 +223,6 @@
         <option value="$PROJECT_DIR$/test_search_tree.sh" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v4/RedBlackTreeFlatCombinev4.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/RedBlackTreeNonThreadSafe.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java" />
         <option value="$PROJECT_DIR$/src/main/java/Dao.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTFlatCombinav6.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RBTBatch.java" />
@@ -252,6 +233,7 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombinev5.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTCombineWorkerv6.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTFlatCombinev6.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java" />
       </list>
     </option>
   </component>
@@ -764,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_search_tree.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-658">
@@ -917,6 +892,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BuildBenchmarkCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
         </state>
       </provider>
     </entry>
