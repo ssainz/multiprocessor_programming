@@ -318,12 +318,12 @@ public class RBTBatch<Key extends Comparable<Key>, Value> implements SearchTree<
      * Or false if exists but is deleted
      * Or true if exists and is actually in the tree.
      */
-    Boolean exists(Key key) {
+    public Boolean exists(Key key) {
         if (key == null) return null;
         return exists(root, key);
     }
 
-    Boolean exists(Node<Key, Value> node, Key key){
+    public Boolean exists(Node<Key, Value> node, Key key){
 
         while(node != null){
             int comparison = key.compareTo(node.key);
@@ -337,7 +337,7 @@ public class RBTBatch<Key extends Comparable<Key>, Value> implements SearchTree<
     /**
      * Changes the node specified by key to the value to val
      */
-    void softPut(Key key, Value val) {
+    public void softPut(Key key, Value val) {
         if (key == null) return;
         softPut(root, key, val);
     }
@@ -360,7 +360,7 @@ public class RBTBatch<Key extends Comparable<Key>, Value> implements SearchTree<
     /**
      * Changes the node specified by key to the value to val
      */
-    void softDelete(Key key) {
+    public void softDelete(Key key) {
         if (key == null) return;
         softDelete(root, key);
     }

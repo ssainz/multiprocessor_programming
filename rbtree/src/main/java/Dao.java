@@ -1,3 +1,4 @@
+import java.net.InetAddress;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -26,9 +27,12 @@ public class Dao {
                 System.out.println("Failed to make connection!");
             }
 
+            // Hostname
+            String hostname = InetAddress.getLocalHost().getHostName();
+
             Statement stmt = conn.createStatement();
-            String stmtStr = String.format("INSERT INTO results (method,numThreads,numGet,numPut,numDelete,avgGetTime," +
-                    "avgPutTime,avgDeleteTime,avgThroughput,load, times) VALUES ('%s',%d,%d,%d,%d,%f,%f,%f,%f,%d, now());", method, numberThreads,
+            String stmtStr = String.format("INSERT INTO results (hostname, method,numThreads,numGet,numPut,numDelete,avgGetTime," +
+                    "avgPutTime,avgDeleteTime,avgThroughput,load, times) VALUES ('%s','%s',%d,%d,%d,%d,%f,%f,%f,%f,%d, now());", hostname, method, numberThreads,
                     numGet,numPut,numDelete,
                     avgGetTime,avgPutTime,avgDeleteTime,
                     avgThroughput, load);
@@ -38,6 +42,7 @@ public class Dao {
             /*
             drop table results;
             CREATE TABLE RESULTS (
+            hostname varchar(50),
             method varchar(50),
             numThreads INTEGER,
             numGet  INTEGER,

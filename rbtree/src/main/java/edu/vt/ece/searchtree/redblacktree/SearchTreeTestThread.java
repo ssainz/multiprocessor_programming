@@ -1,6 +1,7 @@
 package edu.vt.ece.searchtree.redblacktree;
 
 import edu.vt.ece.searchtree.redblacktree.flatcombine.ThreadID;
+import edu.vt.ece.searchtree.redblacktree.flatcombine.v6.RBTFlatCombinev6;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -29,6 +30,11 @@ public class SearchTreeTestThread extends Thread{
         putTimes = 0;
         getTimes = 0;
         deleteTimes = 0;
+
+        if(tree instanceof RBTFlatCombinev6){
+            tree.get(0);
+        }
+
         long start = System.currentTimeMillis();
 
         boolean isEnq = true;

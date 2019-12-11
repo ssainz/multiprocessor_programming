@@ -1,18 +1,19 @@
-package edu.vt.ece.searchtree.redblacktree.flatcombine.v5;
+package edu.vt.ece.searchtree.redblacktree.flatcombine.v6;
 
-import edu.vt.ece.searchtree.redblacktree.flatcombine.v5.RedBlackTreeFlatCombinev5.Operator;
+import edu.vt.ece.searchtree.redblacktree.flatcombine.v5.RBTBatch;
+import edu.vt.ece.searchtree.redblacktree.flatcombine.v6.RBTFlatCombinev6.Operator;
 import edu.vt.ece.searchtree.redblacktree.queue.EmptyException;
 import edu.vt.ece.searchtree.redblacktree.queue.Queue;
 
 import java.util.List;
 
-public class RedBlackTreeFlatCombineWorkerv5 <Key extends Comparable<Key>, Value> extends Thread {
+public class RBTCombineWorkerv6 <Key extends Comparable<Key>, Value> extends Thread {
 
-    RedBlackTreeFlatCombinev5 tree = null;
+    RBTFlatCombinev6 tree = null;
 
 
 
-    RedBlackTreeFlatCombineWorkerv5(RedBlackTreeFlatCombinev5<Key, Value> tree){
+    RBTCombineWorkerv6(RBTFlatCombinev6<Key, Value> tree){
         this.tree = tree;
     }
 
@@ -42,14 +43,41 @@ public class RedBlackTreeFlatCombineWorkerv5 <Key extends Comparable<Key>, Value
 
                             // In this case we just let the caller complete the update.
                             operator.softOperation = true; // Let caller do the work.
-                            tree.numberOfPendingOperations.incrementAndGet(); // When "stop the world" operation needs to occur we want to make sure this is finished.
-                            operator.status.aboutToSleep.set(false); // Awake caller.
+                            operator.status.stopped.set(false); // Awake caller.
                             continue; // go back to the while loop.
                         }
 
                         // insert a new node.
 
-                        while(tree.numberOfPendingOperations.get() > 0); // Wait for pending get to finish.
+                        // STOP THE WORLD!
+                        for(int i = 0 ; i < tree.threadStatusArray.length ; i++){
+                            if(tree.threadStatusArray[i] != null){
+                                tree.threadStatusArray[i].stopTheWorld.set(true);
+                            }
+                        }
+
+                        operator.status.stopped.set(true); // calling thread is already spinning in about to sleep either way.
+
+                        boolean allStopped = false;
+                        while(!allStopped){ // loops until all threads are stopped.
+
+                            allStopped = true;
+                            for(int i = 0 ; i < tree.threadStatusArray.length ; i++){
+                                if(tree.threadStatusArray[i] != null) {
+                                    allStopped &= tree.threadStatusArray[i].stopped.get();
+                                }
+                            }
+
+                        }
+
+                        // At this point all threads are waiting.
+
+                        // REMOVE STOP THE WORLD flag
+                        for(int i = 0 ; i < tree.threadStatusArray.length ; i++){
+                            if(tree.threadStatusArray[i] != null) {
+                                tree.threadStatusArray[i].stopTheWorld.set(false);
+                            }
+                        }
 
                         // Check if MAX_SIZE is reached.
 
@@ -63,6 +91,19 @@ public class RedBlackTreeFlatCombineWorkerv5 <Key extends Comparable<Key>, Value
 
                         operator.res = tree.putV2_util(operator.key, operator.value);
                         tree.size.incrementAndGet();
+
+
+                        // Awake all threads:
+                        for(int i = 0 ; i < tree.threadStatusArray.length ; i++){
+                            if(tree.threadStatusArray[i] != null){
+                                tree.threadStatusArray[i].stopped.set(false);
+                                synchronized(tree.threadStatusArray[i]){
+                                    tree.threadStatusArray[i].notifyAll();
+                                }
+                            }
+
+                        }
+
 
                         //System.out.println(String.format("Thread[%s] wakes up %s, PUT key [%s] SIZE_BEFORE[%d] SIZE_AFTER[%d] RES[%s] HEAP[%d]", ThreadID.get(), operator.pid, operator.key, sizeBefore, sizeAfter, operator.res, heapSize));
 
@@ -85,7 +126,7 @@ public class RedBlackTreeFlatCombineWorkerv5 <Key extends Comparable<Key>, Value
 
 
 
-                        operator.status.aboutToSleep.set(false);
+
 
                         break;
                     case DELETE:
@@ -94,8 +135,7 @@ public class RedBlackTreeFlatCombineWorkerv5 <Key extends Comparable<Key>, Value
 
                             // In this case we just let the caller complete the update.
                             operator.softOperation = true; // Let caller do the work.
-                            tree.numberOfPendingOperations.incrementAndGet(); // When "stop the world" operation needs to occur we want to make sure this is finished.
-                            operator.status.aboutToSleep.set(false); // Awake caller.
+                            operator.status.stopped.set(false); // Awake caller.
                             continue; // go back to the while loop.
                         }
 
@@ -103,18 +143,17 @@ public class RedBlackTreeFlatCombineWorkerv5 <Key extends Comparable<Key>, Value
 
                         operator.res = true;
 
-                        operator.status.aboutToSleep.set(false);
+                        operator.status.stopped.set(false);
 
                         break;
                     case GET:
 
-                        int va = tree.numberOfPendingOperations.incrementAndGet();
 
                         //System.out.println(String.format("Thread[%s] wakes up %s, GET, numberOfPendingGet=%d ", ThreadID.get(), operator.pid, va));
 
                         //wakeUp(operator);
 
-                        operator.status.aboutToSleep.set(false);
+                        operator.status.stopped.set(false);
 
                         break;
 
