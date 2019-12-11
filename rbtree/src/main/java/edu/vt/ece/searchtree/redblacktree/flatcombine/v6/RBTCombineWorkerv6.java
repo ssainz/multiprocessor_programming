@@ -1,7 +1,8 @@
 package edu.vt.ece.searchtree.redblacktree.flatcombine.v6;
 
+import edu.vt.ece.searchtree.redblacktree.flatcombine.ThreadID;
 import edu.vt.ece.searchtree.redblacktree.flatcombine.v5.RBTBatch;
-import edu.vt.ece.searchtree.redblacktree.flatcombine.v6.RBTFlatCombinev6.Operator;
+import edu.vt.ece.searchtree.redblacktree.flatcombine.v6.RBTFlatCombinev6.ThreadStatus;
 import edu.vt.ece.searchtree.redblacktree.queue.EmptyException;
 import edu.vt.ece.searchtree.redblacktree.queue.Queue;
 
@@ -11,7 +12,7 @@ public class RBTCombineWorkerv6 <Key extends Comparable<Key>, Value> extends Thr
 
     RBTFlatCombinev6 tree = null;
 
-
+    boolean isProd = true;
 
     RBTCombineWorkerv6(RBTFlatCombinev6<Key, Value> tree){
         this.tree = tree;
@@ -19,64 +20,101 @@ public class RBTCombineWorkerv6 <Key extends Comparable<Key>, Value> extends Thr
 
     public void run(){
 
-        Queue<Operator> queue = tree.operationsQueue;
+        Queue<ThreadStatus> queue = tree.operationsQueue;
 
         while(true){
             try {
 
+                ThreadStatus status = queue.deq(tree.timeToFinish);
+                if(status == null) return; // is the end
 
+                if(!isProd)
+                    System.out.println(String.format("Thread[%s] gets operator %s", ThreadID.get(), status.operationType));
 
-                Operator operator = queue.deq(tree.timeToFinish);
-                if(operator == null) return; // is the end
-
-                //System.out.println(String.format("Thread[%s] gets operator %s", ThreadID.get(), operator.operationType));
-                /*int sizeBefore = 0;
+                int sizeBefore = 0;
                 int sizeAfter = 0;
                 boolean beforeExisted = false;
                 long heapSize = Runtime.getRuntime().totalMemory();
-                 */
 
-                switch(operator.operationType){
+
+                switch(status.operationType){
                     case PUT:
 
-                        if(tree.actualTree.exists(operator.key) != null){ // Key already exists.
+                        if(!isProd)
+                            System.out.println(String.format("Thread[%s] PID %s, PUT key [%s] ", ThreadID.get(), status.pid, status.opKey));
+
+                        if(tree.actualTree.exists(status.opKey) != null){ // Key already exists.
 
                             // In this case we just let the caller complete the update.
-                            operator.softOperation = true; // Let caller do the work.
-                            operator.status.stopped.set(false); // Awake caller.
+                            status.softOperation = true; // Let caller do the work.
+                            status.waitingInBlockingQueue.set(false); // Awake caller.
                             continue; // go back to the while loop.
                         }
 
                         // insert a new node.
 
                         // STOP THE WORLD!
-                        for(int i = 0 ; i < tree.threadStatusArray.length ; i++){
-                            if(tree.threadStatusArray[i] != null){
-                                tree.threadStatusArray[i].stopTheWorld.set(true);
-                            }
+                        if(!isProd)
+                            System.out.println("STOP THE WORLD!!");
+
+                        ThreadStatus n = tree.head.next;
+                        while (n.nodekey < tree.tail.nodekey) {
+                            //System.out.println(String.format("LockFreeBag:%d,%s", id, n));
+                            n.stopTheWorld.set(true);
+                            n = n.next;
                         }
 
-                        operator.status.stopped.set(true); // calling thread is already spinning in about to sleep either way.
 
                         boolean allStopped = false;
+                        int counter = 0;
                         while(!allStopped){ // loops until all threads are stopped.
 
                             allStopped = true;
-                            for(int i = 0 ; i < tree.threadStatusArray.length ; i++){
-                                if(tree.threadStatusArray[i] != null) {
-                                    allStopped &= tree.threadStatusArray[i].stopped.get();
+
+                            n = tree.head.next;
+                            while (n.nodekey < tree.tail.nodekey) {
+                                //System.out.println(String.format("LockFreeBag:%d,%s", id, n));
+                                if(n.stopped.get()){
+                                    allStopped = allStopped & true;
+                                }else{
+                                    if(n.waitingInBlockingQueue.get()){
+                                        allStopped = allStopped & true;
+                                    }else{
+                                        allStopped = allStopped & false;
+                                    }
                                 }
+                                n = n.next;
+                            }
+                            counter++;
+                            if(counter == 10000){
+                                n = tree.head.next;
+                                while (n.nodekey < tree.tail.nodekey) {
+                                    if(!isProd) System.out.println(String.format("WORKER Status:%d,%s, stopped object %s , stopped %b", n.pid, n, n.stopped, n.stopped.get()));
+                                    allStopped &= n.stopped.get();
+                                    n = n.next;
+                                }
+                                //System.exit(0);
                             }
 
                         }
 
+
+//                        System.out.println("TEST;");
+//                        n = tree.head;
+//                        while (n.nodekey < tree.tail.nodekey) {
+//                            System.out.println(String.format("WORKER Status:%d,%s, stopped object %s , stopped %b", n.pid, n, n.stopped, n.stopped.get()));
+//                            allStopped &= n.stopped.get();
+//                            n = n.next;
+//                        }
+                        //System.exit(0);
                         // At this point all threads are waiting.
 
                         // REMOVE STOP THE WORLD flag
-                        for(int i = 0 ; i < tree.threadStatusArray.length ; i++){
-                            if(tree.threadStatusArray[i] != null) {
-                                tree.threadStatusArray[i].stopTheWorld.set(false);
-                            }
+                        n = tree.head.next;
+                        while (n.nodekey < tree.tail.nodekey) {
+                            //System.out.println(String.format("LockFreeBag:%d,%s", id, n));
+                            n.stopTheWorld.set(false);
+                            n = n.next;
                         }
 
                         // Check if MAX_SIZE is reached.
@@ -89,23 +127,32 @@ public class RBTCombineWorkerv6 <Key extends Comparable<Key>, Value> extends Thr
                         //beforeExisted = tree.actualTree.get(operator.key) != null;
                         //sizeBefore = tree.actualTree.size();
 
-                        operator.res = tree.putV2_util(operator.key, operator.value);
+                        status.res = tree.putV2_util(status.opKey, status.value);
                         tree.size.incrementAndGet();
 
 
                         // Awake all threads:
-                        for(int i = 0 ; i < tree.threadStatusArray.length ; i++){
-                            if(tree.threadStatusArray[i] != null){
-                                tree.threadStatusArray[i].stopped.set(false);
-                                synchronized(tree.threadStatusArray[i]){
-                                    tree.threadStatusArray[i].notifyAll();
+                        n = tree.head.next;
+                        while (n.nodekey < tree.tail.nodekey) {
+
+                            if(n.stopped.get()){ // Only stopped nodes are waiting!!!
+                                synchronized (n){
+
+                                    n.stopped.set(false);
+                                    if(!isProd) System.out.println(String.format("WORKER Status:%d,%s, stopped object %s , stopped %b", n.pid, n, n.stopped, n.stopped.get()));
+                                    n.notifyAll();
                                 }
                             }
+                            //System.out.println(String.format("LockFreeBag:%d,%s", id, n));
 
+                            n = n.next;
                         }
 
+                        if(!isProd) System.out.println(String.format("Thread[%s] PID %s, PUT key [%s] ", ThreadID.get(), status.pid, status.opKey));
 
-                        //System.out.println(String.format("Thread[%s] wakes up %s, PUT key [%s] SIZE_BEFORE[%d] SIZE_AFTER[%d] RES[%s] HEAP[%d]", ThreadID.get(), operator.pid, operator.key, sizeBefore, sizeAfter, operator.res, heapSize));
+                        status.waitingInBlockingQueue.set(false); //Awake original thread who made the PUT
+
+
 
                         /*
                         sizeAfter = tree.actualTree.size();
@@ -131,19 +178,23 @@ public class RBTCombineWorkerv6 <Key extends Comparable<Key>, Value> extends Thr
                         break;
                     case DELETE:
 
-                        if(tree.actualTree.exists(operator.key) != null){ // Key already exists.
+                        if(!isProd) System.out.println(String.format("Thread[%s] PID %s, DELETE key [%s] ", ThreadID.get(), status.pid, status.opKey));
+
+                        if(tree.actualTree.exists(status.opKey) != null){ // Key already exists.
 
                             // In this case we just let the caller complete the update.
-                            operator.softOperation = true; // Let caller do the work.
-                            operator.status.stopped.set(false); // Awake caller.
+                            status.softOperation = true; // Let caller do the work.
+                            status.waitingInBlockingQueue.set(false); // Awake caller.
                             continue; // go back to the while loop.
                         }
 
                         // In this case, key does not exists, thus no need to do anything else, let spinning thread continue.
 
-                        operator.res = true;
+                        status.res = true;
 
-                        operator.status.stopped.set(false);
+                        status.waitingInBlockingQueue.set(false);
+
+                        if(!isProd) System.out.println(String.format("Thread[%s] wakes up %s, DELETE key [%s] ", ThreadID.get(), status.pid, status.opKey));
 
                         break;
                     case GET:
@@ -152,8 +203,6 @@ public class RBTCombineWorkerv6 <Key extends Comparable<Key>, Value> extends Thr
                         //System.out.println(String.format("Thread[%s] wakes up %s, GET, numberOfPendingGet=%d ", ThreadID.get(), operator.pid, va));
 
                         //wakeUp(operator);
-
-                        operator.status.stopped.set(false);
 
                         break;
 

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19e55c95-0235-42c3-9654-081d1f27b44d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTCombineWorkerv6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTFlatCombinev6.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../hw4/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
@@ -15,11 +13,10 @@
       <change beforePath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/build/libs/rbtree.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/build/libs/rbtree.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/RedBlackTreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/SearchTreeTestThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RBTBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RBTBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombineWorkerv5.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombineWorkerv5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombinev5.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v5/RedBlackTreeFlatCombinev5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTCombineWorkerv6.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTCombineWorkerv6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTFlatCombinev6.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/flatcombine/v6/RBTFlatCombinev6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/BoundedLockFreeQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/src/main/java/edu/vt/ece/searchtree/redblacktree/queue/BoundedLockFreeQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../rbtree/stack_trace.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../rbtree/stack_trace.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -42,11 +39,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/bag/LockFreeBag.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="29" />
+            <state relative-caret-position="330">
+              <caret line="74" column="9" lean-forward="true" selection-start-line="72" selection-start-column="8" selection-end-line="74" selection-end-column="9" />
+              <folding>
+                <element signature="e#204#314#0" expanded="true" />
+                <element signature="e#313#314#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,7 +61,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/set/Dao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="532">
@@ -376,13 +377,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/bag/LockFreeBag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_queue.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -394,6 +388,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="90" column="5" lean-forward="true" selection-start-line="51" selection-start-column="4" selection-end-line="90" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/vt/ece/hw6/bag/LockFreeBag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="74" column="9" lean-forward="true" selection-start-line="72" selection-start-column="8" selection-end-line="74" selection-end-column="9" />
+          <folding>
+            <element signature="e#204#314#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

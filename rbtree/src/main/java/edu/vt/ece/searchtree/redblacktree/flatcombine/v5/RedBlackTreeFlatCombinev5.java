@@ -15,7 +15,7 @@ public class RedBlackTreeFlatCombinev5 <Key extends Comparable<Key>, Value> impl
     public volatile RBTBatch<Key, Value> actualTree = new RBTBatch<>();
 
     /**
-     * This v3 will not wait for GET threads, BACKOFF wait in DELETE,PUT
+     * This v5 SoftDelete/SoftInsert
      */
 
     public final ThreadLocal<Operator> threadLocalOperation = new ThreadLocal<Operator>() {
