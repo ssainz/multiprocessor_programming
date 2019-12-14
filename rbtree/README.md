@@ -1,51 +1,35 @@
-# ECE 5510 Homework 5 Template
+# ECE 5510 Project Red Black Tree using Flat Combining
 
 ## Contact
 
-Contact the course TA for any questions. You will be notified when the contents of this repository changes.
+Sergio Sainz ssainz@vt.edu
 
 ## Overview
-
-Use this template to submit your solution to Part II of Homework 5. 
-Your assignment may not be graded otherwise. 
-**Submit your solution as a zip file on Canvas.** 
-
-Note that this template may undergo modification throughout the homework. 
-The template consists of two packages: `lists` and `edu.vt.ece.hw5`. 
-The former consists of linked list implementations discussed in the textbook, 
-while the latter is the template for this homework. 
-You may use ideas and code snippets from the former but you should only modify the latter package.
-
-## Downloading this template
-
-If you know `git`, you can clone this repository and work on it.
-
-Otherwise, click the `Clone or download` button on the repository page and then click `Download zip` to download a zip file.   
-
-## Submission
-
-You must zip this folder and submit to Canvas
-
-## Building and Running the template
-
-The below instructions should be run from the top-level directory.
-
-### Building the project and producing binaries:
 
 Linux: ` ./gradlew build -x test`
 
 Windows: `./gradlew.bat build -x test`
 
-This will produce the binaries in the build folder.
-
 ### Running Benchmark main programs:
 
 __Benchmark__:
-`java -cp build/libs/hw5.jar edu.vt.ece.hw5.bag.Benchmark <YOUR_ARGS>`
+`java  -cp build/libs/rbtree.jar RedBlackTreeTest METHOD THREAD_NUM ITERS`
 
-Replace `<YOUR_ARGS>` with the arguments you would like to pass to the respective main programs. 
-Note that the TA will only run the above command to verify if the submission works. 
-Furthermore, the TA will also inspect your respective implementations.
+METHOD can be one of
+
+- RBTFlatCombineV6
+- RBTCoarseGrained 
+- RBTCompositional 
+- RBTTransactional
+- RBTFlatCombineV5
+- RBTFlatCombineV1
+- RBTFlatCombineV2
+- RBTFlatCombineV4
+- RBTFlatCombineV3
+
+When using RBTCompositional or RBTTransactional you must run using 
+
+`java -javaagent:libs/deuceAgent-1.3.0.jar -cp build/libs/rbtree.jar RedBlackTreeTest METHOD THREAD_NUM ITERS`
 
 ## Intellij
 
